@@ -1,0 +1,29 @@
+#special-announcements{
+	max-width: 900px;
+	margin: 20px auto;
+
+		
+	.entry-header.entry-title{
+		font-size: 1.3em;
+		@include break(mama-bear-up){
+			display: inline;
+		}
+
+	}
+	@include break(mama-bear-up){
+		.entry-summary {
+			display: inline;
+			
+			p:first-child{
+				display: inline;
+			}
+		}
+	}
+	.hentry{
+		padding: 40px;
+		border-left: 4px solid green;
+		@include break(baby-bear-down){
+			padding: 20px 0px;
+		}
+	}
+}

@@ -1,0 +1,809 @@
+/*
+Theme Name: Post Playhouse
+Description: For use on www.postplayhouse.com.
+Author: Double D Photo & Design
+Author URI: www.ddphotodesign.com
+Version: 2.1.9
+*/
+
+/* Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
+-------------------------------------------------------------- */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+	background: transparent;
+}
+body {
+	line-height: 1;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+	clear: both;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote {
+	quotes: none;
+}
+blockquote:before, blockquote:after {
+	content: '';
+	content: none;
+}
+del {
+	text-decoration: line-through;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a img { border: none; }
+
+
+/*--------------------Begin Actual Styles----------------------------------*/
+
+#iesux{
+	display:none;
+}
+
+body {
+	margin: 0px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	color: #000000;
+	background:url(images/bg.png) repeat;
+	background-color: #555d89;
+	line-height: 1.4em;
+}
+p {
+    margin-bottom: 1em;
+}
+img {
+	border-style: none;
+}
+a, a:visited{
+    color: #7f83b2;
+}
+h2, h2.entry-title{
+	color: #7f83b2;
+	font-size: 1.8em;
+	margin:0.5em 0 0.5em 0;
+	text-shadow:0px 1px 2px #000;
+	font-variant:small-caps;
+}
+h2.entry-title a{
+	color:#7f83b2;
+	text-decoration:none;
+	text-shadow:0px 1px 2px #000;
+}
+h3{
+        color: #070b34;
+        font-family: arial, sans-serif;
+        font-size: 1.1em;
+}
+h5{
+        color: #070b34;
+        font-family: arial, sans-serif;
+        font-weight:bold;
+		font-size: 1.2em;
+		text-align:center;
+		border-bottom:2px solid #070b34;
+		margin-bottom:8px;
+}
+h6{
+        color: #999;
+        font-family: arial, sans-serif;
+        font-style: italic;
+        font-size: 0.9em;
+        #font-variant: small-caps;
+}
+.smaller{
+	font-size: 0.7em;
+}
+.anchor {
+	clear:both;
+}
+#mainContainer {
+	width: 900px;
+	margin-right: auto;
+	margin-left: auto;
+	position: relative;
+}
+#header {
+	position: relative;
+	text-align:center;
+}
+#contentContainer {
+	width: 850px;
+	margin:auto;
+	background-color:none;
+}
+#candy_dish{
+	margin-top:10px;
+	margin-bottom:24px;
+	position:relative;
+}
+.placard{
+	font-size:1.0em;
+	font-weight:bold;
+	background-color:#070b34;
+	color:#555d89;
+	padding:3px;
+	display:block;
+	font-style:italic;
+}
+/* --------- Begining of Nav----------- */
+ul#nav {
+	position:relative;
+	width:100%;
+	float: left;
+	list-style: none;
+	line-height: 1.5em;
+	background: #070b34;
+	font-size: 0.9em;
+    padding: 0;
+	margin: 0;
+	margin-bottom:10px;
+}
+#nav a{
+	display: block;
+	color: #999;
+	text-decoration: none;
+	padding: 0.25em 0.8em;
+}
+#nav li {
+	float: left;
+	padding: 0;
+}
+ 
+#nav li ul {
+	background-color:#7f83b2;
+	position: absolute;
+	left: -999em;
+	height: auto;
+	width: 16em;
+	font-weight: normal;
+	border-width: 0.25em;
+	margin: 0;
+	z-index: 100;
+	font-size: 1.0em;
+	/*border:#070b34 3px solid;
+	border-top:none;*/
+}
+#nav li ul a {
+	color:#000;
+}
+#nav li li {
+	width: 16em
+}
+ 
+#nav li ul li{
+	border-top:1px solid #070b34;
+}
+#nav li ul{
+	border-bottom:1px solid #070b34;
+	line-height:1.8em;
+}
+#nav li ul ul {
+	border-left:1px solid #070b34;
+} 
+#nav li ul ul {
+	margin: -2em 0 0 14em;
+    font-size: 1.0em;
+}
+
+#nav li:hover ul ul, #nav li:hover ul ul ul {
+	left: -999em;
+}
+ 
+#nav li:hover ul, #nav li li:hover ul, #nav li li li:hover ul {
+	left: auto;
+}
+ 
+#nav li:hover,
+#nav li a:hover,
+#nav li:hover a {
+	color: #000;
+    background: #7f83b2;
+}
+#nav ul li:hover, #nav ul li a:hover{
+	background-color:#99c;
+}
+#nav li.current-menu-item a,
+#nav li.current-menu-item a:hover,
+#nav li.current-menu-ancestor li.current-menu-item a,
+#nav li.current_page_item a,
+#nav li.current_page_item a:hover,
+#nav li.current_page_ancestor li.current_page_item a{
+	color:#fff;
+	cursor:default;
+}
+#nav li.current-menu-item a,
+#nav li.current_page_item a{
+	background:#070b34;
+}
+#nav ul li.current-menu-item a,
+#nav ul li.current_page_item a,
+#nav ul li.current-menu-item a:hover,
+#nav ul li.current_page_item a:hover{
+	background:#7f83b2;
+}
+#nav li.current-menu-ancestor a,
+#nav li.current_page_ancestor a{
+	background:#7f83b2;
+	color:#000;
+}
+#nav li.current-menu-item ul a,
+#nav li.current-menu-item ul a:hover,
+#nav li.current_page_item ul a,
+#nav li.current_page_item ul a:hover{
+	color:#000;
+}
+#nav a{
+	cursor:default;
+}
+#nav a:link, #nav a:visited{
+	cursor:pointer;
+}
+#nav li.current-menu-item li a{
+	background: #7f83b2;
+}
+#nav li.current-menu-item li a:hover{
+	background: #99c;
+	cursor: pointer;
+}
+/* ------------end of Nav----------- */
+
+div#content {
+    clear: left;
+	position:relative;
+	padding-top:20px;
+	padding-bottom:40px;
+	min-height:400px;
+}
+.entry-utility {
+	margin-top:8px;
+	font-size:0.7em;
+}
+div#front_page_posts_holder{
+	width:900px;
+}
+.recent_stories{
+	margin-bottom:8px;
+	color:#070b34;
+	font-size:1.3em;
+	text-shadow:0px 2px 2px #444;
+	border-bottom:1px solid #070b34;
+}
+a.front_page_posts{
+	color:#000;
+	text-decoration:none;
+	display:block;
+	width:273px;
+	float:left;
+	margin-right:15px;
+	border:none;
+	
+	margin-bottom:15px;
+}
+a.front_page_posts div.front_page_posts{
+	border:3px solid #070b34;
+	background:#7f83b2;
+	height:192px;
+	padding:4px;
+	position:relative;
+}
+a.front_page_posts:hover div.front_page_posts{
+	background:#9fa5d4;
+}
+#content a.front_page_posts div.front_page_posts img{
+	border:none;
+	float:left;
+	margin-right:4px;
+}
+a.front_page_posts div.front_page_posts h2{
+	clear:none;
+	text-align:center;
+	color:#070b34;
+	text-shadow:0px 1px 1px #000;
+	margin:0;
+	margin-bottom:8px;
+	font-size:1.5em;
+}
+a.front_page_posts div.front_page_posts div.entry-content{
+	font-size:0.9em;
+	width:100%;
+	line-height:1.2em;
+}
+a.front_page_posts div.front_page_posts span.read_more{
+	display:block;
+	position:absolute;
+	bottom:3px;
+	right:3px;
+	line-height:1em;
+	font-size:0.7em;
+	color:#070b34;
+}
+a.front_page_posts div.front_page_posts span.the_date{
+	display:block;
+	position:absolute;
+	bottom:3px;
+	left:3px;
+	line-height:1em;
+	font-size:0.7em;
+	color:#070b34;
+	font-family: "Times New Roman", Times, serif;
+}
+
+
+.entry-meta{
+	font-size:0.9em;
+	font-variant:small-caps;
+	color:#070b34;
+}
+/*  --------Ticket page tables------- */
+.tickets {
+	background-color: #99c;
+	line-height: 1.8em;
+	border: 1px solid #070b34;
+	border-collapse: collapse;
+	font-size: 0.8em;
+	margin-bottom:18px;
+}
+.tickets .dotted_under {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #7f83b2;
+}
+.tickets  th {
+	color: #070b34;
+	font-weight: normal;
+	font-size: 1.3em;
+	background: #7f83b2;
+	line-height: 2em;
+}
+.tickets .centered {
+	text-align: center;
+}
+.tickets .info {
+	color: #070b34;
+	font-size: 0.75em;
+	line-height: 1em;
+	padding-bottom: 5px;
+}
+.tickets .solid_under {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #000;
+}
+.tickets  td:first-child {
+	width: 25%;
+	padding-left: 2%;
+}
+#subscriber_info td.subscriber_alert {
+	font-size: 0.8em;
+	color: #070b34;
+	padding-left: 8px;
+	line-height: 1.5em;
+}
+
+/* -------after content--------*/
+#footer div.sponsors {
+	background:url(images/playhouse_pic.jpg) top left no-repeat;
+	width:535px;
+	margin:auto;
+	padding-top:10px;
+	padding-left:315px;
+	padding-bottom:40px;
+	margin-bottom:12px;
+	margin-top:20px;
+	position:relative;
+}
+#footer img {
+	float:left;
+	clear:both;
+}
+#footer p {
+	float:right;
+	width:418px;
+	font-size:0.55em;
+	line-height:1em;
+	font-family:Arial, Helvetica, sans-serif;
+	text-align:justify;
+}
+#footer p#site_description{
+	float:none;
+	
+	width:800px;
+	
+	font-size:0.8em;
+	
+	margin:auto;
+	
+	margin-top:2em;
+}
+#arts_council_text{
+	margin-bottom:20px;
+	color:#002900;
+}
+#arts_council_text a{
+	color:#000900;
+}
+#csc_text{
+	color:#51001a;
+	padding-top:1em;
+	margin-bottom:20px;
+}
+#fort_rob_text{
+	padding-top:0.5em;
+}
+#footer p#ddphoto{
+	position:absolute;
+	bottom:0;
+	left:0;
+	width:850px;
+	text-align:center;
+}
+/*-----------------------------------the new stuff--------------------------*/
+
+#nav-below{
+	margin:8px auto;
+}
+/* Images
+-------------------------------------------------------------- */
+
+#content img {
+	margin: 0;
+	max-width: 640px;
+	border:#070b34 2px solid;
+}
+#content .attachment img {
+	max-width: 900px;
+}
+#content .alignleft,
+#content img.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 24px;
+	margin-top: 4px;
+}
+#content .alignright,
+#content img.alignright {
+	display: inline;
+	float: right;
+	margin-left: 24px;
+	margin-top: 4px;
+}
+#content .aligncenter,
+#content img.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+#content img.alignleft, 
+#content img.alignright, 
+#content img.aligncenter {
+	margin-bottom: 12px;
+}
+#content .wp-caption {
+	background: #779;
+	line-height: 18px;
+	text-align: center;
+	margin-bottom: 12px;
+	padding: 4px;
+}
+#content .wp-caption img {
+	margin: 5px 5px 0;
+}
+#content .wp-caption p.wp-caption-text {
+	margin: 5px;
+	color: #111;
+	font-size: 12px;
+}
+#content .wp-smiley {
+	margin:0;
+}
+#content .gallery {
+	margin: auto;
+	width:800px;
+	left:-50px;
+	position:relative;
+}
+#content .gallery .gallery-item {
+	float: left;
+	margin-top: 0;
+	text-align: center;
+	width: 25%;
+}
+#content .gallery .gallery-caption {
+	color: #888;
+	font-size: 12px;
+	margin: 0 0 12px;
+}
+#content .gallery dl {
+	margin: 0;
+}
+#content .gallery img {
+	border: 6px solid #7f83b2;
+}
+#content .gallery br+br {
+	display: none;
+}
+
+/* !Production Photo Archives */
+.production_photo_archive a{
+	text-decoration: none;
+	color:#fff;
+	color:rgba(255,255,255,0.8);
+	padding:6px;
+	position: relative;
+	width: 338px;
+	height:188px;
+	display: block;
+	background-color: #000;
+	background-color: rgba(0,0,0,0.6);
+}
+.production_photo_archive a:hover{
+	color:rgba(255,255,255,0.8);
+	color:rgba(255,255,255,0.2);
+	background-color: transparent;
+	background-color: rgba(0,0,0,0);
+	text-shadow: 0 0 rgba(0,0,0,0.2);
+}
+h2.production_photo_archive{
+	float:left;
+	overflow: hidden;
+	clear: none;
+	margin:20px 34px;
+	background-color: #000;
+	background-image: url('./images/theatre.jpg');
+}
+.production_photo_archive span.smaller{
+	position: absolute;
+	bottom:6px;
+	right:6px;
+}
+/* Quick fixes ---------------------------------------------------*/
+
+.entry-content{
+	line-height:1.8em;
+	margin:auto;
+	width:700px;
+}
+
+.page {
+	position:relative;
+}
+
+div.page-link.top {
+	position:absolute;
+	top:0;
+	right:0;
+}
+
+div.page-link {
+	border:1px solid #070b34;
+	background: #FFFFCC;
+	padding:0 5px;
+	position:relative;
+	bottom:auto;
+	top:0;
+}
+h1.page-title {
+	color:#070b34;
+	text-align:center;
+	font-size:1.8em;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-weight:bold;
+	padding:8px;
+	text-shadow:0px 1px 2px #000;
+}
+.after_h1{
+	background-color:#7F83B2;
+	height:2px;
+	margin:0;
+	-moz-box-shadow:0px 1px 2px #000;
+}
+div.production_image_holder{
+	background:#000;
+	border:8px solid #070b34;
+	border-left: none;
+	border-right: none;
+	margin-bottom:0;
+	text-align: center;
+}
+#content div.production_image_holder img{
+	border:none;
+	margin: 8px 1%;
+	max-width: 75%;	
+}
+#content div.production_image_holder img.sponsor_image{
+	max-width: 20%;
+}
+#content div.running_dates {
+	float:left;
+	line-height:1.4em;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#070b34;
+	font-weight:bold;
+	width:200px;
+	font-size:0.9em;
+}
+#content div.running_dates li{
+	margin-left:24px;
+	text-indent:-24px;
+}
+#content div.dates_message{
+	font-size:2em;
+	color:#070b34;
+	text-align:center;
+	font-family:Arial, Helvetica, sans-serif;
+}
+#content div.production_content{
+	clear:both;
+	border-bottom:2px solid #7f83b2;
+	padding-top:8px;
+}
+#content div.production_stats{
+	margin:0;
+	background-color: #7f83b2;
+	padding:8px;
+	border-bottom:1px solid #070b34;
+}
+div.production h2.entry-title{
+	text-align:center;
+	font-size:2em;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-weight:bold;
+	padding:8px;
+	border:none;
+	line-height:1em;
+}
+.show_title {
+	font-variant:small-caps;
+	font-family:"Times New Roman", Times, serif;
+	font-size:1.1em;
+}
+.song_title {
+	font-style:italic;
+	color:#111;
+}
+.writers {
+	display:block;
+	margin-top:-24px;
+	font-size:0.8em;
+	width:75%;
+	margin:auto;
+}
+.notice {
+	display:block;
+	border:1px solid #070b34;
+	background-color: #aaa;
+	padding:5px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	font-size:0.8em;
+	line-height:1.3em;
+	width:90%;
+	margin:auto;
+	color:#fff;
+}
+a.photo_gallery{
+	margin:auto;
+	background-color: #7f83b2;
+	border:1px solid #070b34;
+	color:#070b34;
+	padding:5px;
+	text-decoration:none;
+	text-shadow:none;
+}
+a.photo_gallery:hover{
+	text-decoration:underline;
+	text-shadow:none;
+}
+#content ol{
+	list-style:decimal;
+	padding-left:3em;
+	margin:8px;
+}
+.bio_role{
+	display:block;
+	color:#070b34;
+	font-size:1.2em;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	line-height:1.2em;
+}
+.hover:hover{
+	color:#070b34;
+}
+ul.page_tree{
+	float:right;
+	border:1px solid #7f83b2;
+	background: #333b67;
+	padding:0 5px;
+	margin:8px;
+}
+
+/*---------------page decorations---------------------------*/
+#top_decoration{
+	position:absolute;
+	top:0;
+	left:-40px;
+	right:-40px;
+	height:60px;
+	border:3px solid #070b34;
+	border-bottom:none;
+}
+#top_decoration .left_wing{
+	position:absolute;
+	top:8px;
+	left:8px;
+	height:180px;
+	width:80px;
+	border:3px solid #070b34;
+	border-bottom:none;
+	border-right:none;
+}
+#top_decoration .right_wing{
+	position:absolute;
+	top:8px;
+	right:8px;
+	height:180px;
+	width:80px;
+	border:3px solid #070b34;
+	border-bottom:none;
+	border-left:none;
+}
+#bottom_decoration{
+	position:absolute;
+	bottom:0;
+	left:-40px;
+	right:-40px;
+	height:60px;
+	border:3px solid #070b34;
+	border-top:none;
+}
+#bottom_decoration .left_wing{
+	position:absolute;
+	bottom:8px;
+	left:8px;
+	height:180px;
+	width:80px;
+	border:3px solid #070b34;
+	border-top:none;
+	border-right:none;
+}
+#bottom_decoration .right_wing{
+	position:absolute;
+	bottom:8px;
+	right:8px;
+	height:180px;
+	width:80px;
+	border:3px solid #070b34;
+	border-top:none;
+	border-left:none;
+}
+/*fix the absolutes above covering the content and disabling links: */
+div#decoration_fixer{
+	position:relative;
+}
+
+#nav li.page-item-792 a{
+	/*color:red;*/
+}
+#nav li.page-item-792 a:hover{
+	color:black;
+}

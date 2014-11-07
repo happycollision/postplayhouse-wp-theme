@@ -1,0 +1,228 @@
+/*/
+$test-color: #444;
+
+$main-text: $test-color;
+$main-bg: $test-color;
+$subtle-bg: $test-color;
+$subtle-border: $test-color;
+$button: $test-color;
+$button-hover: $test-color;
+$button-tint: $test-color;
+$button-hover-tint: $test-color;
+$button-edge: $test-color;
+$pop-bg: $test-color;
+$pop-bg-text: $test-color;
+$subtle-bg-subtle-text: $test-color;
+$article-link: $test-color;
+$article-link-hover: $test-color;
+$pop-bg-link: $test-color;
+$pop-bg-link-hover: $test-color;
+$nav-sub-bg-hover: $test-color;
+$subtle-bg-border-focus: $test-color;
+$button-text: $test-color;
+$input-placeholder: $test-color;
+$main-bg-border: $test-color;
+$alt-link-bg: $test-color;
+$alt-link: $test-color;
+$transparent-dark: $test-color;
+$transparent-dark-complimentary-text: $test-color;
+$transparent-pop-shadow: $test-color;
+$subtle-bg-alt: $test-color;
+$table-border-color: $test-color;
+$article-link-visited: $test-color;
+/**/
+/*/
+$test-color: #444;
+
+$main-text: $test-color;
+$main-bg: $test-color;
+$subtle-bg: $test-color;
+$subtle-border: $test-color;
+$button: $test-color;
+$button-hover: $test-color;
+$button-tint: $test-color;
+$button-hover-tint: $test-color;
+$button-edge: $test-color;
+$pop-bg: $test-color;
+$pop-bg-text: $test-color;
+$subtle-bg-subtle-text: $test-color;
+$article-link: $test-color;
+$article-link-hover: $test-color;
+$pop-bg-link: $test-color;
+$pop-bg-link-hover: $test-color;
+$nav-sub-bg-hover: $test-color;
+$subtle-bg-border-focus: $test-color;
+$button-text: $test-color;
+$input-placeholder: $test-color;
+$main-bg-border: $test-color;
+$alt-link-bg: $test-color;
+$alt-link: $test-color;
+$transparent-dark: $test-color;
+$transparent-dark-complimentary-text: $test-color;
+$transparent-pop-shadow: $test-color;
+$subtle-bg-alt: $test-color;
+$table-border-color: $test-color;
+$article-link-visited: $test-color;
+/**/
+/* line 1, ../../app/scss/_typography.scss */
+.show_title {
+  font-style: italic;
+}
+
+/* line 4, ../../app/scss/css/calendar.scss */
+.entry-content {
+  max-width: 1000px;
+  padding: 0 20px;
+}
+
+/* line 8, ../../app/scss/css/calendar.scss */
+.calendar, .calendar tr, .calendar td {
+  box-sizing: border-box;
+  margin-bottom: 4em;
+}
+
+/* line 12, ../../app/scss/css/calendar.scss */
+.month_name {
+  font-size: 2em;
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* line 17, ../../app/scss/css/calendar.scss */
+.month {
+  width: 100%;
+  margin: 10px auto;
+}
+
+/* line 21, ../../app/scss/css/calendar.scss */
+.week {
+  clear: both;
+}
+
+/* line 24, ../../app/scss/css/calendar.scss */
+.day {
+  width: auto;
+  min-width: 14%;
+  padding: 0.5%;
+  border: 1px solid #aaaaaa;
+  background: rgba(255, 255, 255, 0.3);
+  min-height: 14%;
+}
+/* line 32, ../../app/scss/css/calendar.scss */
+.day .month_name {
+  display: none;
+  font-size: 1em;
+  color: #aaaaaa;
+}
+@media (max-width: 643px) {
+  /* line 32, ../../app/scss/css/calendar.scss */
+  .day .month_name {
+    display: inline;
+  }
+}
+
+/* line 42, ../../app/scss/css/calendar.scss */
+.calendar a, .calendar a:link, .calendar a:visited {
+  color: #ea9629;
+}
+
+/* line 46, ../../app/scss/css/calendar.scss */
+.day_name {
+  display: none;
+  color: #aaaaaa;
+}
+
+/* line 50, ../../app/scss/css/calendar.scss */
+.day.dark {
+  background: #eaefe4;
+}
+
+/* line 53, ../../app/scss/css/calendar.scss */
+.day.padding {
+  background: transparent;
+  border: none;
+}
+
+/* line 57, ../../app/scss/css/calendar.scss */
+.day.padding .mday {
+  display: none;
+}
+
+/* line 60, ../../app/scss/css/calendar.scss */
+.week:first-child .day .day_name {
+  display: inline;
+}
+
+/* line 63, ../../app/scss/css/calendar.scss */
+.mday {
+  float: right;
+  font-size: 0.9em;
+  color: #aaaaaa;
+}
+
+/* line 68, ../../app/scss/css/calendar.scss */
+.day_content {
+  clear: both;
+  font-size: 0.7em;
+  line-height: 1.3em;
+}
+
+/* line 73, ../../app/scss/css/calendar.scss */
+.showing {
+  margin-bottom: 1em;
+}
+
+/* line 76, ../../app/scss/css/calendar.scss */
+.extra_show_info {
+  margin: 20px auto;
+}
+
+@media (max-width: 643px) {
+  /* line 82, ../../app/scss/css/calendar.scss */
+  .calendar tbody, .calendar table, .calendar tr, .calendar td {
+    display: block;
+    margin: 0;
+    border: none;
+  }
+  /* line 87, ../../app/scss/css/calendar.scss */
+  .calendar .day {
+    border: none;
+    background: none;
+    margin-bottom: 2em;
+  }
+  /* line 92, ../../app/scss/css/calendar.scss */
+  .calendar .padding, .calendar .dark {
+    display: none;
+  }
+  /* line 95, ../../app/scss/css/calendar.scss */
+  .calendar .day_name {
+    display: inline;
+  }
+  /* line 98, ../../app/scss/css/calendar.scss */
+  .calendar .day_name:after {
+    content: ',';
+  }
+  /* line 102, ../../app/scss/css/calendar.scss */
+  .calendar .day_content {
+    border-top: 2px solid #dfeed4;
+    font-size: 1.5em;
+  }
+  /* line 106, ../../app/scss/css/calendar.scss */
+  .calendar .mday {
+    float: none;
+  }
+  /* line 109, ../../app/scss/css/calendar.scss */
+  .calendar .showing {
+    padding-left: 1.5em;
+    margin-bottom: 0.8em;
+  }
+  /* line 113, ../../app/scss/css/calendar.scss */
+  .calendar .show_time {
+    display: block;
+    color: #5da95d;
+  }
+  /* line 119, ../../app/scss/css/calendar.scss */
+  .calendar .past {
+    display: none;
+  }
+}

@@ -1,0 +1,79 @@
+@mixin display-flex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+@mixin flex($values){
+  -webkit-box-flex: $values;
+  -moz-box-flex:  $values;
+  -webkit-flex:  $values;
+  -ms-flex:  $values;
+  flex:  $values;
+}
+
+@mixin justify-content($justification: flex-start){
+	$justification: unquote($justification);
+	@include experimental(justify-content, $justification, -moz, -webkit, not -o, -ms, not -khtml, official);
+}
+
+@mixin flex-flow($args){
+	@include experimental(flex-flow, unquote($args) );//, -moz, -webkit, not -o, -ms, not -khtml, official);
+}
+
+@mixin pull-gutter($margin){
+	margin-left:-#{$margin};
+	margin-right:-#{$margin};
+	padding-left:$margin;
+	padding-right:$margin;
+}
+
+	$baby-min: 0px;
+	$mama-min: 644px;
+	$papa-min: 960px;
+	$baby-max: $mama-min - 1;
+	$mama-max: $papa-min - 1;
+	$papa-max: 1175px;
+@mixin break($point) {
+  
+  @if $point == papa-bear-up {
+    @media (min-width: $papa-min) { @content; }
+  }
+  @else if $point == mama-bear-up {
+    @media (min-width: $mama-min) { @content; }
+  }
+  @else if $point == baby-bear-up {
+    @media (min-width: $baby-min)  { @content; }
+  }
+  
+  @if $point == papa-bear-down {
+    @media (max-width: $papa-max) { @content; }
+  }
+  @else if $point == mama-bear-down {
+    @media (max-width: $mama-max) { @content; }
+  }
+  @else if $point == baby-bear-down {
+    @media (max-width: $baby-max)  { @content; }
+  }
+
+  @if $point == papa-bear-only {
+    @media (max-width: $papa-max) and (min-width: $papa-min) { @content; }
+  }
+  @else if $point == mama-bear-only {
+    @media (max-width: $mama-max) and (min-width: $mama-min) { @content; }
+  }
+  @else if $point == baby-bear-only {
+    @media (max-width: $baby-max) and (min-width: $baby-min)  { @content; }
+  }
+}
+
+@mixin break-point($width, $direction) {
+  @if $direction == down {
+    @media (max-width: $width) { @content; }
+  }
+  @if $direction == up {
+    @media (min-width: $width) { @content; }
+  }
+}
+

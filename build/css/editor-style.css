@@ -1,0 +1,713 @@
+/*/
+$test-color: #444;
+
+$main-text: $test-color;
+$main-bg: $test-color;
+$subtle-bg: $test-color;
+$subtle-border: $test-color;
+$button: $test-color;
+$button-hover: $test-color;
+$button-tint: $test-color;
+$button-hover-tint: $test-color;
+$button-edge: $test-color;
+$pop-bg: $test-color;
+$pop-bg-text: $test-color;
+$subtle-bg-subtle-text: $test-color;
+$article-link: $test-color;
+$article-link-hover: $test-color;
+$pop-bg-link: $test-color;
+$pop-bg-link-hover: $test-color;
+$nav-sub-bg-hover: $test-color;
+$subtle-bg-border-focus: $test-color;
+$button-text: $test-color;
+$input-placeholder: $test-color;
+$main-bg-border: $test-color;
+$alt-link-bg: $test-color;
+$alt-link: $test-color;
+$transparent-dark: $test-color;
+$transparent-dark-complimentary-text: $test-color;
+$transparent-pop-shadow: $test-color;
+$subtle-bg-alt: $test-color;
+$table-border-color: $test-color;
+$article-link-visited: $test-color;
+/**/
+/*/
+$test-color: #444;
+
+$main-text: $test-color;
+$main-bg: $test-color;
+$subtle-bg: $test-color;
+$subtle-border: $test-color;
+$button: $test-color;
+$button-hover: $test-color;
+$button-tint: $test-color;
+$button-hover-tint: $test-color;
+$button-edge: $test-color;
+$pop-bg: $test-color;
+$pop-bg-text: $test-color;
+$subtle-bg-subtle-text: $test-color;
+$article-link: $test-color;
+$article-link-hover: $test-color;
+$pop-bg-link: $test-color;
+$pop-bg-link-hover: $test-color;
+$nav-sub-bg-hover: $test-color;
+$subtle-bg-border-focus: $test-color;
+$button-text: $test-color;
+$input-placeholder: $test-color;
+$main-bg-border: $test-color;
+$alt-link-bg: $test-color;
+$alt-link: $test-color;
+$transparent-dark: $test-color;
+$transparent-dark-complimentary-text: $test-color;
+$transparent-pop-shadow: $test-color;
+$subtle-bg-alt: $test-color;
+$table-border-color: $test-color;
+$article-link-visited: $test-color;
+/**/
+/* line 1, ../../app/scss/_typography.scss */
+.show_title {
+  font-style: italic;
+}
+
+/*
+Theme Name: Twenty Thirteen
+Description: Used to style the TinyMCE editor.
+*/
+/**
+ * Table of Contents:
+ *
+ * 1.0 - Body
+ * 2.0 - Headings
+ * 3.0 - Text Elements
+ * 4.0 - Links
+ * 5.0 - Alignment
+ * 6.0 - Tables
+ * 7.0 - Images
+ * 8.0 - Post Formats
+ * 9.0 - RTL
+ * ----------------------------------------------------------------------------
+ */
+/**
+ * 1.0 Body
+ * ----------------------------------------------------------------------------
+ */
+/* line 29, ../../app/scss/css/editor-style.scss */
+html .mceContentBody {
+  font-size: 100%;
+  max-width: 604px;
+}
+
+/* line 34, ../../app/scss/css/editor-style.scss */
+body {
+  color: #142614;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  vertical-align: baseline;
+}
+
+/**
+ * 2.0 Headings
+ * ----------------------------------------------------------------------------
+ */
+/* line 53, ../../app/scss/css/editor-style.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  clear: both;
+  font-family: Bitter, Georgia, serif;
+  line-height: 1.3;
+}
+
+/* line 59, ../../app/scss/css/editor-style.scss */
+h1 {
+  font-size: 48px;
+  margin: 33px 0;
+}
+
+/* line 64, ../../app/scss/css/editor-style.scss */
+h2 {
+  font-size: 30px;
+  margin: 25px 0;
+}
+
+/* line 69, ../../app/scss/css/editor-style.scss */
+h3 {
+  font-size: 22px;
+  margin: 22px 0;
+}
+
+/* line 74, ../../app/scss/css/editor-style.scss */
+h4 {
+  font-size: 20px;
+  margin: 25px 0;
+}
+
+/* line 79, ../../app/scss/css/editor-style.scss */
+h5 {
+  font-size: 18px;
+  margin: 30px 0;
+}
+
+/* line 84, ../../app/scss/css/editor-style.scss */
+h6 {
+  font-size: 16px;
+  margin: 36px 0;
+}
+
+/* line 89, ../../app/scss/css/editor-style.scss */
+hr {
+  background: url(../images/dotted-line.png) repeat center top;
+  background-size: 4px 4px;
+  border: 0;
+  height: 1px;
+  margin: 0 0 24px;
+}
+
+/**
+ * 3.0 Text Elements
+ * ----------------------------------------------------------------------------
+ */
+/* line 103, ../../app/scss/css/editor-style.scss */
+p {
+  margin: 0 0 24px;
+}
+
+/* line 108, ../../app/scss/css/editor-style.scss */
+ol,
+ul {
+  margin: 16px 0;
+  padding: 0 0 0 40px;
+}
+
+/* line 113, ../../app/scss/css/editor-style.scss */
+ul {
+  list-style-type: square;
+}
+
+/* line 117, ../../app/scss/css/editor-style.scss */
+ol {
+  list-style: decimal outside;
+}
+
+/* line 122, ../../app/scss/css/editor-style.scss */
+li > ul,
+li > ol {
+  margin: 0;
+}
+
+/* line 126, ../../app/scss/css/editor-style.scss */
+dl {
+  margin: 0 20px;
+}
+
+/* line 130, ../../app/scss/css/editor-style.scss */
+dt {
+  font-weight: bold;
+}
+
+/* line 134, ../../app/scss/css/editor-style.scss */
+dd {
+  margin: 0 0 20px;
+}
+
+/* line 138, ../../app/scss/css/editor-style.scss */
+strong {
+  font-weight: bold;
+}
+
+/* line 145, ../../app/scss/css/editor-style.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 14px;
+}
+
+/* line 150, ../../app/scss/css/editor-style.scss */
+pre {
+  background: #f5f5f5;
+  color: #666;
+  font-family: monospace;
+  font-size: 14px;
+  margin: 20px 0;
+  overflow: auto;
+  padding: 20px;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* line 164, ../../app/scss/css/editor-style.scss */
+blockquote,
+q {
+  quotes: none;
+}
+
+/* line 171, ../../app/scss/css/editor-style.scss */
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+/* line 176, ../../app/scss/css/editor-style.scss */
+blockquote {
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 300;
+  margin: 24px 40px;
+}
+
+/* line 183, ../../app/scss/css/editor-style.scss */
+blockquote blockquote {
+  margin-right: 0;
+}
+
+/* line 188, ../../app/scss/css/editor-style.scss */
+blockquote cite,
+blockquote small {
+  font-size: 14px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+/* line 194, ../../app/scss/css/editor-style.scss */
+cite {
+  border-bottom: 0;
+}
+
+/* line 198, ../../app/scss/css/editor-style.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/* line 202, ../../app/scss/css/editor-style.scss */
+address {
+  font-style: italic;
+  margin: 0 0 24px;
+}
+
+/* line 207, ../../app/scss/css/editor-style.scss */
+del {
+  color: #333;
+}
+
+/* line 211, ../../app/scss/css/editor-style.scss */
+ins {
+  background: #fff9c0;
+  border: none;
+  color: #333;
+  text-decoration: none;
+}
+
+/* line 219, ../../app/scss/css/editor-style.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 226, ../../app/scss/css/editor-style.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 230, ../../app/scss/css/editor-style.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/**
+ * 4.0 Links
+ * ----------------------------------------------------------------------------
+ */
+/* line 240, ../../app/scss/css/editor-style.scss */
+a {
+  color: #2b8609;
+  text-decoration: none;
+}
+
+/* line 245, ../../app/scss/css/editor-style.scss */
+a:visited {
+  color: #1c5606;
+}
+
+/* line 249, ../../app/scss/css/editor-style.scss */
+a:focus {
+  outline: thin dotted;
+}
+
+/* line 254, ../../app/scss/css/editor-style.scss */
+a:active,
+a:hover {
+  color: #ea9629;
+  outline: 0;
+}
+
+/* line 259, ../../app/scss/css/editor-style.scss */
+a:hover {
+  text-decoration: underline;
+}
+
+/**
+ * 5.0 Alignment
+ * ----------------------------------------------------------------------------
+ */
+/* line 269, ../../app/scss/css/editor-style.scss */
+.alignleft {
+  float: left;
+  margin: 5px 20px 5px 0;
+}
+
+/* line 274, ../../app/scss/css/editor-style.scss */
+.alignright {
+  float: right;
+  margin: 5px 0 5px 20px;
+}
+
+/* line 279, ../../app/scss/css/editor-style.scss */
+.aligncenter {
+  display: block;
+  margin: 5px auto;
+}
+
+/* line 284, ../../app/scss/css/editor-style.scss */
+img.alignnone {
+  margin: 5px 0;
+}
+
+/**
+ * 6.0 Tables
+ * ----------------------------------------------------------------------------
+ */
+/* line 294, ../../app/scss/css/editor-style.scss */
+table {
+  border-bottom: 1px solid #ededed;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 14px;
+  line-height: 2;
+  margin: 0 0 20px;
+  width: 100%;
+}
+
+/* line 306, ../../app/scss/css/editor-style.scss */
+caption,
+th,
+td {
+  font-weight: normal;
+  text-align: left;
+}
+
+/* line 311, ../../app/scss/css/editor-style.scss */
+caption {
+  font-size: 16px;
+  margin: 20px 0;
+}
+
+/* line 316, ../../app/scss/css/editor-style.scss */
+th {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* line 321, ../../app/scss/css/editor-style.scss */
+td {
+  border-top: 1px solid #ededed;
+  padding: 6px 10px 6px 0;
+}
+
+/**
+ * 7.0 Images
+ * ----------------------------------------------------------------------------
+ */
+/* line 332, ../../app/scss/css/editor-style.scss */
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+/* line 338, ../../app/scss/css/editor-style.scss */
+.wp-caption {
+  background: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+/* line 346, ../../app/scss/css/editor-style.scss */
+.wp-caption.alignleft {
+  margin: 5px 10px 5px 0;
+}
+
+/* line 350, ../../app/scss/css/editor-style.scss */
+.wp-caption.alignright {
+  margin: 5px 0 5px 10px;
+}
+
+/* line 354, ../../app/scss/css/editor-style.scss */
+.wp-caption-dt {
+  margin: 0;
+}
+
+/* line 359, ../../app/scss/css/editor-style.scss */
+.wp-caption .wp-caption-text,
+.wp-caption-dd {
+  color: #002d04;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.5;
+  margin-bottom: 24px;
+  padding: 0;
+}
+
+/* line 370, ../../app/scss/css/editor-style.scss */
+.mceTemp + ul,
+.mceTemp + ol {
+  list-style-position: inside;
+}
+
+/**
+ * 8.0 Post Formats
+ * ----------------------------------------------------------------------------
+ */
+/* Aside */
+/* line 381, ../../app/scss/css/editor-style.scss */
+.post-format-aside {
+  background-color: #eaefe4;
+}
+
+/* line 385, ../../app/scss/css/editor-style.scss */
+.post-format-aside blockquote {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+/* line 390, ../../app/scss/css/editor-style.scss */
+.post-format-aside cite {
+  font-size: 100%;
+  text-transform: none;
+}
+
+/* line 395, ../../app/scss/css/editor-style.scss */
+.post-format-aside cite:before {
+  content: "\2014";
+  margin-right: 5px;
+}
+
+/* Audio */
+/* line 401, ../../app/scss/css/editor-style.scss */
+.post-format-audio {
+  background-color: #db572f;
+}
+
+/* line 405, ../../app/scss/css/editor-style.scss */
+.post-format-audio a {
+  color: #fbfaf3;
+}
+
+/* line 409, ../../app/scss/css/editor-style.scss */
+.post-format-audio:before {
+  background: url(../images/dotted-line.png) repeat-y 85px 0;
+  background-size: 4px 4px;
+  content: "\f109";
+  display: block;
+  float: left;
+  font-family: Genericons;
+  font-size: 64px;
+  -webkit-font-smoothing: antialiased;
+  height: 100%;
+  line-height: 1;
+  width: 120px;
+}
+
+/* Chat */
+/* line 424, ../../app/scss/css/editor-style.scss */
+.post-format-chat {
+  background-color: #eadaa6;
+}
+
+/* line 428, ../../app/scss/css/editor-style.scss */
+.post-format-chat a {
+  color: #722d19;
+}
+
+/* Gallery */
+/* line 433, ../../app/scss/css/editor-style.scss */
+.post-format-gallery {
+  background-color: #fbca3c;
+}
+
+/* line 437, ../../app/scss/css/editor-style.scss */
+.post-format-gallery a {
+  color: #722d19;
+}
+
+/* Image: same as Standard/Defaults */
+/* Link */
+/* line 444, ../../app/scss/css/editor-style.scss */
+.post-format-link {
+  background-color: #eaefe4;
+}
+
+/* Quote */
+/* line 449, ../../app/scss/css/editor-style.scss */
+.post-format-quote {
+  background-color: #210d10;
+  color: #eaefe4;
+}
+
+/* line 454, ../../app/scss/css/editor-style.scss */
+.post-format-quote a {
+  color: #e63f2a;
+}
+
+/* line 458, ../../app/scss/css/editor-style.scss */
+.post-format-quote blockquote {
+  font-size: 28px;
+  font-style: italic;
+  font-weight: 300;
+  margin: 0;
+  padding-left: 75px;
+  position: relative;
+}
+
+/* line 467, ../../app/scss/css/editor-style.scss */
+.post-format-quote blockquote:before {
+  content: '\201C';
+  font-size: 140px;
+  font-weight: 400;
+  line-height: .8;
+  padding-right: 25px;
+  position: absolute;
+  left: -15px;
+  top: -3px;
+}
+
+/* line 479, ../../app/scss/css/editor-style.scss */
+.post-format-quote blockquote small,
+.post-format-quote blockquote cite {
+  display: block;
+  font-size: 16px;
+}
+
+/* line 484, ../../app/scss/css/editor-style.scss */
+.format-quote .entry-content cite a {
+  border-bottom: 1px dotted white;
+  color: white;
+}
+
+/* line 489, ../../app/scss/css/editor-style.scss */
+.format-quote .entry-content cite a:hover {
+  text-decoration: none;
+}
+
+/* Status */
+/* line 495, ../../app/scss/css/editor-style.scss */
+.post-format-status {
+  background-color: #722d19;
+  color: #eaefe4;
+  font-style: italic;
+  font-weight: 300;
+  padding: 0;
+  padding-left: 35px;
+}
+
+/* line 504, ../../app/scss/css/editor-style.scss */
+.post-format-status.mceContentBody {
+  font-size: 24px;
+}
+
+/* line 508, ../../app/scss/css/editor-style.scss */
+.post-format-status:before {
+  background: url(../images/dotted-line.png) repeat-y left bottom;
+  background-size: 4px 4px;
+  content: "";
+  display: block;
+  float: left;
+  height: 100%;
+  position: relative;
+  left: -30px;
+  width: 1px;
+}
+
+/* line 520, ../../app/scss/css/editor-style.scss */
+.post-format-status > p:first-child:before {
+  background-color: rgba(0, 0, 0, 0.65);
+  content: "";
+  height: 3px;
+  width: 13px;
+  margin-top: 13px;
+  position: absolute;
+  left: 9px;
+}
+
+/* line 530, ../../app/scss/css/editor-style.scss */
+.post-format-status a {
+  color: #eadaa6;
+}
+
+/* Video */
+/* line 535, ../../app/scss/css/editor-style.scss */
+.post-format-video {
+  background-color: #db572f;
+}
+
+/* line 539, ../../app/scss/css/editor-style.scss */
+.post-format-video a {
+  color: #fbfaf3;
+}
+
+/**
+ * 9.0 RTL
+ * ----------------------------------------------------------------------------
+ */
+/* line 549, ../../app/scss/css/editor-style.scss */
+html .mceContentBody.rtl {
+  direction: rtl;
+  unicode-bidi: embed;
+}
+
+/* line 555, ../../app/scss/css/editor-style.scss */
+.rtl ol,
+.rtl ul {
+  padding: 0 40px 0 0;
+}
+
+/* line 560, ../../app/scss/css/editor-style.scss */
+.rtl .wp-caption,
+.rtl tr th {
+  text-align: right;
+}
+
+/* line 564, ../../app/scss/css/editor-style.scss */
+.rtl td {
+  padding: 6px 0 6px 10px;
+  text-align: right;
+}
+
+/* line 569, ../../app/scss/css/editor-style.scss */
+.rtl blockquote blockquote {
+  margin-left: 0;
+  margin-right: 24px;
+}
+
+/* line 576, ../../app/scss/css/editor-style.scss */
+.rtl.post-format-audio:before,
+.rtl.post-format-status:before,
+.rtl.post-format-status > p:first-child:before {
+  background: none;
+  content: none;
+}

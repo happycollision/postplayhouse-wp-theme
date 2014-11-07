@@ -1,0 +1,3939 @@
+/*
+ Theme Name:   Post Playhouse (Twenty Thirteen tweaks)
+ Description:  Twenty Thirteen Child Theme
+ Author:       Don Denton, Happy Collision
+ Author URI:   http://happycollision.com
+ Template:     twentythirteen
+ Version:      3.0.0
+ Text Domain:  twenty-thirteen-child
+*/
+/*/
+$test-color: #444;
+
+$main-text: $test-color;
+$main-bg: $test-color;
+$subtle-bg: $test-color;
+$subtle-border: $test-color;
+$button: $test-color;
+$button-hover: $test-color;
+$button-tint: $test-color;
+$button-hover-tint: $test-color;
+$button-edge: $test-color;
+$pop-bg: $test-color;
+$pop-bg-text: $test-color;
+$subtle-bg-subtle-text: $test-color;
+$article-link: $test-color;
+$article-link-hover: $test-color;
+$pop-bg-link: $test-color;
+$pop-bg-link-hover: $test-color;
+$nav-sub-bg-hover: $test-color;
+$subtle-bg-border-focus: $test-color;
+$button-text: $test-color;
+$input-placeholder: $test-color;
+$main-bg-border: $test-color;
+$alt-link-bg: $test-color;
+$alt-link: $test-color;
+$transparent-dark: $test-color;
+$transparent-dark-complimentary-text: $test-color;
+$transparent-pop-shadow: $test-color;
+$subtle-bg-alt: $test-color;
+$table-border-color: $test-color;
+$article-link-visited: $test-color;
+/**/
+/*/
+$test-color: #444;
+
+$main-text: $test-color;
+$main-bg: $test-color;
+$subtle-bg: $test-color;
+$subtle-border: $test-color;
+$button: $test-color;
+$button-hover: $test-color;
+$button-tint: $test-color;
+$button-hover-tint: $test-color;
+$button-edge: $test-color;
+$pop-bg: $test-color;
+$pop-bg-text: $test-color;
+$subtle-bg-subtle-text: $test-color;
+$article-link: $test-color;
+$article-link-hover: $test-color;
+$pop-bg-link: $test-color;
+$pop-bg-link-hover: $test-color;
+$nav-sub-bg-hover: $test-color;
+$subtle-bg-border-focus: $test-color;
+$button-text: $test-color;
+$input-placeholder: $test-color;
+$main-bg-border: $test-color;
+$alt-link-bg: $test-color;
+$alt-link: $test-color;
+$transparent-dark: $test-color;
+$transparent-dark-complimentary-text: $test-color;
+$transparent-pop-shadow: $test-color;
+$subtle-bg-alt: $test-color;
+$table-border-color: $test-color;
+$article-link-visited: $test-color;
+/**/
+/* line 1, ../app/scss/_typography.scss */
+.show_title {
+  font-style: italic;
+}
+
+/*
+Theme Name: Twenty Thirteen
+Theme URI: http://wordpress.org/themes/twentythirteen
+Author: the WordPress team
+Author URI: http://wordpress.org/
+Description: The 2013 theme for WordPress takes us back to the blog, featuring a full range of post formats, each displayed beautifully in their own unique way. Design details abound, starting with a vibrant color scheme and matching header images, beautiful typography and icons, and a flexible layout that looks great on any device, big or small.
+Version: 1.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, brown, orange, tan, white, yellow, light, one-column, two-columns, right-sidebar, flexible-width, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, translation-ready
+Text Domain: twentythirteen
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+/**
+ * Table of Contents:
+ *
+ * 1.0 - Reset
+ * 2.0 - Repeatable Patterns
+ * 3.0 - Basic Structure
+ * 4.0 - Header
+ *   4.1 - Site Header
+ *   4.2 - Navigation
+ * 5.0 - Content
+ *   5.1 - Entry Header
+ *   5.2 - Entry Meta
+ *   5.3 - Entry Content
+ *   5.4 - Galleries
+ *   5.5 - Post Formats
+ *   5.6 - Attachments
+ *   5.7 - Post/Paging Navigation
+ *   5.8 - Author Bio
+ *   5.9 - Archives
+ *   5.10 - Search Results/No posts
+ *   5.11 - 404
+ *   5.12 - Comments
+ *   5.13 - Multisite
+ * 6.0 - Sidebar
+ *   6.1 - Widgets
+ * 7.0 - Footer
+ * 8.0 - Media Queries
+ * 9.0 - Print
+ * ----------------------------------------------------------------------------
+ */
+/**
+ * 1.0 Reset
+ *
+ * Modified from Normalize.css to provide cross-browser consistency and a smart
+ * default styling of HTML elements.
+ *
+ * @see http://git.io/normalize
+ * ----------------------------------------------------------------------------
+ */
+/* line 60, ../app/scss/_twentythirteen.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 75, ../app/scss/_twentythirteen.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/* line 81, ../app/scss/_twentythirteen.scss */
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+/* line 85, ../app/scss/_twentythirteen.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/* line 90, ../app/scss/_twentythirteen.scss */
+[hidden] {
+  display: none;
+}
+
+/* line 94, ../app/scss/_twentythirteen.scss */
+html {
+  font-size: 100%;
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/* line 105, ../app/scss/_twentythirteen.scss */
+html,
+button,
+.button,
+input,
+select,
+textarea {
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+}
+
+/* line 109, ../app/scss/_twentythirteen.scss */
+body {
+  color: #142614;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* line 115, ../app/scss/_twentythirteen.scss */
+a {
+  color: #2b8609;
+  text-decoration: none;
+}
+
+/* line 120, ../app/scss/_twentythirteen.scss */
+a:visited {
+  color: #1c5606;
+}
+
+/* line 124, ../app/scss/_twentythirteen.scss */
+a:focus {
+  outline: thin dotted;
+}
+
+/* line 129, ../app/scss/_twentythirteen.scss */
+a:active,
+a:hover {
+  color: #ea9629;
+  outline: 0;
+}
+
+/* line 134, ../app/scss/_twentythirteen.scss */
+a:hover {
+  text-decoration: underline;
+}
+
+/* line 143, ../app/scss/_twentythirteen.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  clear: both;
+  font-family: Bitter, Georgia, serif;
+  line-height: 1.3;
+}
+
+/* line 149, ../app/scss/_twentythirteen.scss */
+h1 {
+  font-size: 48px;
+  margin: 33px 0;
+}
+
+/* line 154, ../app/scss/_twentythirteen.scss */
+h2 {
+  font-size: 30px;
+  margin: 25px 0;
+}
+
+/* line 159, ../app/scss/_twentythirteen.scss */
+h3 {
+  font-size: 22px;
+  margin: 22px 0;
+}
+
+/* line 164, ../app/scss/_twentythirteen.scss */
+h4 {
+  font-size: 20px;
+  margin: 25px 0;
+}
+
+/* line 169, ../app/scss/_twentythirteen.scss */
+h5 {
+  font-size: 18px;
+  margin: 30px 0;
+}
+
+/* line 174, ../app/scss/_twentythirteen.scss */
+h6 {
+  font-size: 16px;
+  margin: 36px 0;
+}
+
+/* line 179, ../app/scss/_twentythirteen.scss */
+address {
+  font-style: italic;
+  margin: 0 0 24px;
+}
+
+/* line 184, ../app/scss/_twentythirteen.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/* line 189, ../app/scss/_twentythirteen.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/* line 193, ../app/scss/_twentythirteen.scss */
+dfn {
+  font-style: italic;
+}
+
+/* line 197, ../app/scss/_twentythirteen.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/* line 202, ../app/scss/_twentythirteen.scss */
+p {
+  margin: 0 0 24px;
+}
+
+/* line 209, ../app/scss/_twentythirteen.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 14px;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* line 218, ../app/scss/_twentythirteen.scss */
+pre {
+  background: #f5f5f5;
+  color: #666;
+  font-family: monospace;
+  font-size: 14px;
+  margin: 20px 0;
+  overflow: auto;
+  padding: 20px;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* line 232, ../app/scss/_twentythirteen.scss */
+blockquote,
+q {
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  quotes: none;
+}
+
+/* line 243, ../app/scss/_twentythirteen.scss */
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+/* line 248, ../app/scss/_twentythirteen.scss */
+blockquote {
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 300;
+  margin: 24px 40px;
+}
+
+/* line 255, ../app/scss/_twentythirteen.scss */
+blockquote blockquote {
+  margin-right: 0;
+}
+
+/* line 260, ../app/scss/_twentythirteen.scss */
+blockquote cite,
+blockquote small {
+  font-size: 14px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+/* line 267, ../app/scss/_twentythirteen.scss */
+blockquote em,
+blockquote i {
+  font-style: normal;
+  font-weight: 300;
+}
+
+/* line 273, ../app/scss/_twentythirteen.scss */
+blockquote strong,
+blockquote b {
+  font-weight: 400;
+}
+
+/* line 277, ../app/scss/_twentythirteen.scss */
+small {
+  font-size: smaller;
+}
+
+/* line 282, ../app/scss/_twentythirteen.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 289, ../app/scss/_twentythirteen.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 293, ../app/scss/_twentythirteen.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 297, ../app/scss/_twentythirteen.scss */
+dl {
+  margin: 0 20px;
+}
+
+/* line 301, ../app/scss/_twentythirteen.scss */
+dt {
+  font-weight: bold;
+}
+
+/* line 305, ../app/scss/_twentythirteen.scss */
+dd {
+  margin: 0 0 20px;
+}
+
+/* line 311, ../app/scss/_twentythirteen.scss */
+menu,
+ol,
+ul {
+  margin: 16px 0;
+  padding: 0 0 0 40px;
+}
+
+/* line 316, ../app/scss/_twentythirteen.scss */
+ul {
+  list-style-type: square;
+}
+
+/* line 321, ../app/scss/_twentythirteen.scss */
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+
+/* line 327, ../app/scss/_twentythirteen.scss */
+li > ul,
+li > ol {
+  margin: 0;
+}
+
+/* line 331, ../app/scss/_twentythirteen.scss */
+img {
+  -ms-interpolation-mode: bicubic;
+  border: 0;
+  vertical-align: middle;
+}
+
+/* line 337, ../app/scss/_twentythirteen.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* line 341, ../app/scss/_twentythirteen.scss */
+figure {
+  margin: 0;
+}
+
+/* line 345, ../app/scss/_twentythirteen.scss */
+form {
+  margin: 0;
+}
+
+/* line 349, ../app/scss/_twentythirteen.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/* line 355, ../app/scss/_twentythirteen.scss */
+legend {
+  border: 0;
+  padding: 0;
+  white-space: normal;
+}
+
+/* line 364, ../app/scss/_twentythirteen.scss */
+button, .button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  margin: 0;
+  max-width: 100%;
+  vertical-align: baseline;
+}
+
+/* line 372, ../app/scss/_twentythirteen.scss */
+button, .button,
+input {
+  line-height: normal;
+}
+
+/* line 379, ../app/scss/_twentythirteen.scss */
+button, .button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+/* line 385, ../app/scss/_twentythirteen.scss */
+button[disabled], [disabled].button,
+input[disabled] {
+  cursor: default;
+}
+
+/* line 390, ../app/scss/_twentythirteen.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  padding: 0;
+}
+
+/* line 394, ../app/scss/_twentythirteen.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  padding-right: 2px;
+  /* Don't cut off the webkit search cancel button */
+  width: 270px;
+}
+
+/* line 400, ../app/scss/_twentythirteen.scss */
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* line 405, ../app/scss/_twentythirteen.scss */
+button::-moz-focus-inner, .button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* line 410, ../app/scss/_twentythirteen.scss */
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+/* line 415, ../app/scss/_twentythirteen.scss */
+table {
+  border-bottom: 1px solid #ededed;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 14px;
+  line-height: 2;
+  margin: 0 0 20px;
+  width: 100%;
+}
+
+/* line 427, ../app/scss/_twentythirteen.scss */
+caption,
+th,
+td {
+  font-weight: normal;
+  text-align: left;
+}
+
+/* line 432, ../app/scss/_twentythirteen.scss */
+caption {
+  font-size: 16px;
+  margin: 20px 0;
+}
+
+/* line 437, ../app/scss/_twentythirteen.scss */
+th {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* line 442, ../app/scss/_twentythirteen.scss */
+td {
+  border-top: 1px solid #ededed;
+  padding: 6px 10px 6px 0;
+}
+
+/* line 447, ../app/scss/_twentythirteen.scss */
+del {
+  color: #333;
+}
+
+/* line 451, ../app/scss/_twentythirteen.scss */
+ins {
+  background: #fff9c0;
+  text-decoration: none;
+}
+
+/* line 456, ../app/scss/_twentythirteen.scss */
+hr {
+  background: url(images/dotted-line.png) repeat center top;
+  background-size: 4px 4px;
+  border: 0;
+  height: 1px;
+  margin: 0 0 24px;
+}
+
+/**
+ * 2.0 Repeatable Patterns
+ * ----------------------------------------------------------------------------
+ */
+/* line 488, ../app/scss/_twentythirteen.scss */
+.genericon:before,
+.menu-toggle:after,
+.featured-post:before,
+.date a:before,
+.entry-meta .author a:before,
+.format-audio .entry-content:before,
+.comments-link a:before,
+.tags-links a:first-child:before,
+.categories-links a:first-child:before,
+.edit-link a:before,
+.attachment .entry-title:before,
+.attachment-meta:before,
+.attachment-meta a:before,
+.comment-awaiting-moderation:before,
+.comment-reply-link:before,
+.comment-reply-login:before,
+.comment-reply-title small a:before,
+.bypostauthor > .comment-body .fn:before,
+.error404 .page-title:before {
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font: normal 16px/1 Genericons;
+  vertical-align: text-bottom;
+}
+
+/* Clearing floats */
+/* line 507, ../app/scss/_twentythirteen.scss */
+.clear:after,
+.attachment .entry-header:after,
+.site-footer .widget-area:after,
+.entry-content:after,
+.page-content:after,
+.navigation:after,
+.nav-links:after,
+.gallery:after,
+.comment-form-author:after,
+.comment-form-email:after,
+.comment-form-url:after,
+.comment-body:after {
+  clear: both;
+}
+
+/* line 534, ../app/scss/_twentythirteen.scss */
+.clear:before,
+.clear:after,
+.attachment .entry-header:before,
+.attachment .entry-header:after,
+.site-footer .widget-area:before,
+.site-footer .widget-area:after,
+.entry-content:before,
+.entry-content:after,
+.page-content:before,
+.page-content:after,
+.navigation:before,
+.navigation:after,
+.nav-links:before,
+.nav-links:after,
+.gallery:before,
+.gallery:after,
+.comment-form-author:before,
+.comment-form-author:after,
+.comment-form-email:before,
+.comment-form-email:after,
+.comment-form-url:before,
+.comment-form-url:after,
+.comment-body:before,
+.comment-body:after {
+  content: "";
+  display: table;
+}
+
+/* Assistive text */
+/* line 540, ../app/scss/_twentythirteen.scss */
+.screen-reader-text, header#masthead a.home-link h1 {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+}
+
+/* line 545, ../app/scss/_twentythirteen.scss */
+.screen-reader-text:focus, header#masthead a.home-link h1:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  height: auto;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  text-decoration: none;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar */
+}
+
+/* Form fields, general styles first. */
+/* line 568, ../app/scss/_twentythirteen.scss */
+button, .button,
+input,
+textarea {
+  border: 2px solid #d1dcc4;
+  font-family: inherit;
+  padding: 5px;
+}
+
+/* line 575, ../app/scss/_twentythirteen.scss */
+input,
+textarea {
+  color: #142614;
+}
+
+/* line 580, ../app/scss/_twentythirteen.scss */
+input:focus,
+textarea:focus {
+  border: 2px solid #c3c0ab;
+  outline: 0;
+}
+
+/* Buttons */
+/* line 589, ../app/scss/_twentythirteen.scss */
+button, .button,
+input[type="submit"],
+input[type="button"],
+input[type="reset"] {
+  background: #33921b;
+  /* Old browsers */
+  background: -webkit-linear-gradient(top, #33921b 0%, #246713 100%);
+  /* Chrome 10+, Safari 5.1+ */
+  background: linear-gradient(to bottom, #33921b 0%, #246713 100%);
+  /* W3C */
+  border: none;
+  border-bottom: 3px solid #153c0b;
+  border-radius: 2px;
+  color: white;
+  display: inline-block;
+  padding: 11px 24px 10px;
+  text-decoration: none;
+}
+
+/* line 609, ../app/scss/_twentythirteen.scss */
+button:hover, .button:hover,
+button:focus,
+.button:focus,
+input[type="submit"]:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus {
+  background: #4ad327;
+  /* Old browsers */
+  background: -webkit-linear-gradient(top, #4ad327 0%, #3ba81f 100%);
+  /* Chrome 10+, Safari 5.1+ */
+  background: linear-gradient(to bottom, #4ad327 0%, #3ba81f 100%);
+  /* W3C */
+  outline: none;
+}
+
+/* line 619, ../app/scss/_twentythirteen.scss */
+button:active, .button:active,
+input[type="submit"]:active,
+input[type="button"]:active,
+input[type="reset"]:active {
+  background: #246713;
+  /* Old browsers */
+  background: -webkit-linear-gradient(top, #246713 0%, #33921b 100%);
+  /* Chrome 10+, Safari 5.1+ */
+  background: linear-gradient(to bottom, #246713 0%, #33921b 100%);
+  /* W3C */
+  border: none;
+  border-top: 3px solid #153c0b;
+  padding: 10px 24px 11px;
+}
+
+/* line 628, ../app/scss/_twentythirteen.scss */
+.post-password-required input[type="submit"] {
+  padding: 7px 24px 4px;
+  vertical-align: bottom;
+}
+
+/* line 633, ../app/scss/_twentythirteen.scss */
+.post-password-required input[type="submit"]:active {
+  padding: 5px 24px 6px;
+}
+
+/* Placeholder text color -- selectors need to be separate to work. */
+/* line 638, ../app/scss/_twentythirteen.scss */
+::-webkit-input-placeholder {
+  color: #7d7b6d;
+}
+
+/* line 642, ../app/scss/_twentythirteen.scss */
+:-moz-placeholder {
+  color: #7d7b6d;
+}
+
+/* line 646, ../app/scss/_twentythirteen.scss */
+::-moz-placeholder {
+  color: #7d7b6d;
+}
+
+/* line 650, ../app/scss/_twentythirteen.scss */
+:-ms-input-placeholder {
+  color: #7d7b6d;
+}
+
+/*
+ * Responsive images
+ *
+ * Fluid images for posts, comments, and widgets
+ */
+/* line 663, ../app/scss/_twentythirteen.scss */
+.entry-content img,
+.entry-summary img,
+.comment-content img,
+.widget img,
+.wp-caption {
+  max-width: 100%;
+}
+
+/* Make sure images with WordPress-added height and width attributes are scaled correctly. */
+/* line 673, ../app/scss/_twentythirteen.scss */
+.entry-content img,
+.entry-summary img,
+.comment-content img[height],
+img[class*="align"],
+img[class*="wp-image-"],
+img[class*="attachment-"] {
+  height: auto;
+}
+
+/* line 679, ../app/scss/_twentythirteen.scss */
+img.size-full,
+img.size-large,
+img.wp-post-image {
+  height: auto;
+  max-width: 100%;
+}
+
+/* Make sure videos and embeds fit their containers. */
+/* line 688, ../app/scss/_twentythirteen.scss */
+embed,
+iframe,
+object,
+video {
+  max-width: 100%;
+}
+
+/* Override the Twitter embed fixed width. */
+/* line 693, ../app/scss/_twentythirteen.scss */
+.entry-content .twitter-tweet-rendered {
+  max-width: 100% !important;
+}
+
+/* Images */
+/* line 698, ../app/scss/_twentythirteen.scss */
+.alignleft {
+  float: left;
+}
+
+/* line 702, ../app/scss/_twentythirteen.scss */
+.alignright {
+  float: right;
+}
+
+/* line 706, ../app/scss/_twentythirteen.scss */
+.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 712, ../app/scss/_twentythirteen.scss */
+img.alignleft {
+  margin: 5px 20px 5px 0;
+}
+
+/* line 716, ../app/scss/_twentythirteen.scss */
+.wp-caption.alignleft {
+  margin: 5px 10px 5px 0;
+}
+
+/* line 720, ../app/scss/_twentythirteen.scss */
+img.alignright {
+  margin: 5px 0 5px 20px;
+}
+
+/* line 724, ../app/scss/_twentythirteen.scss */
+.wp-caption.alignright {
+  margin: 5px 0 5px 10px;
+}
+
+/* line 728, ../app/scss/_twentythirteen.scss */
+img.aligncenter {
+  margin: 5px auto;
+}
+
+/* line 732, ../app/scss/_twentythirteen.scss */
+img.alignnone {
+  margin: 5px 0;
+}
+
+/* line 738, ../app/scss/_twentythirteen.scss */
+.wp-caption .wp-caption-text,
+.entry-caption,
+.gallery-caption {
+  color: #002d04;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 300;
+}
+
+/* line 746, ../app/scss/_twentythirteen.scss */
+img.wp-smiley,
+.rsswidget img {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0;
+}
+
+/* line 756, ../app/scss/_twentythirteen.scss */
+.wp-caption.alignleft + ul,
+.wp-caption.alignleft + ol {
+  list-style-position: inside;
+}
+
+/**
+ * 3.0 Basic Structure
+ * ----------------------------------------------------------------------------
+ */
+/* line 766, ../app/scss/_twentythirteen.scss */
+.site {
+  background-color: white;
+  border-left: 1px solid #f2f2f2;
+  border-right: 1px solid #f2f2f2;
+  margin: 0 auto;
+  max-width: 1600px;
+  width: 100%;
+}
+
+/* line 775, ../app/scss/_twentythirteen.scss */
+.site-main {
+  position: relative;
+}
+
+/* line 779, ../app/scss/_twentythirteen.scss */
+.site-main .sidebar-container {
+  height: 0;
+  position: absolute;
+  top: 40px;
+  width: 100%;
+  z-index: 1;
+}
+
+/* line 787, ../app/scss/_twentythirteen.scss */
+.site-main .sidebar-inner {
+  margin: 0 auto;
+  max-width: 1040px;
+}
+
+/**
+ * 4.0 Header
+ * ----------------------------------------------------------------------------
+ */
+/**
+ * 4.1 Site Header
+ * ----------------------------------------------------------------------------
+ */
+/* line 803, ../app/scss/_twentythirteen.scss */
+.site-header {
+  position: relative;
+}
+
+/* line 807, ../app/scss/_twentythirteen.scss */
+.site-header .home-link {
+  color: #142614;
+  display: block;
+  margin: 0 auto;
+  max-width: 1080px;
+  min-height: 230px;
+  padding: 0 20px;
+  text-decoration: none;
+  width: 100%;
+}
+
+/* line 818, ../app/scss/_twentythirteen.scss */
+.site-header .site-title:hover {
+  text-decoration: underline;
+}
+
+/* line 822, ../app/scss/_twentythirteen.scss */
+.site-title {
+  font-size: 60px;
+  font-weight: bold;
+  line-height: 1;
+  margin: 0;
+  padding: 58px 0 10px;
+}
+
+/* line 830, ../app/scss/_twentythirteen.scss */
+.site-description {
+  font: 300 italic 24px "Source Sans Pro", Helvetica, sans-serif;
+  margin: 0;
+}
+
+/**
+ * 4.2 Navigation
+ * ----------------------------------------------------------------------------
+ */
+/* line 841, ../app/scss/_twentythirteen.scss */
+.main-navigation {
+  clear: both;
+  margin: 0 auto;
+  max-width: 1080px;
+  min-height: 45px;
+  position: relative;
+}
+
+/* line 850, ../app/scss/_twentythirteen.scss */
+ul.nav-menu,
+div.nav-menu > ul {
+  margin: 0;
+  padding: 0 40px 0 0;
+}
+
+/* line 855, ../app/scss/_twentythirteen.scss */
+.nav-menu li {
+  display: inline-block;
+  position: relative;
+}
+
+/* line 860, ../app/scss/_twentythirteen.scss */
+.nav-menu li a {
+  color: #142614;
+  display: block;
+  font-size: 15px;
+  line-height: 1;
+  padding: 15px 20px;
+  text-decoration: none;
+}
+
+/* line 870, ../app/scss/_twentythirteen.scss */
+.nav-menu li:hover > a,
+.nav-menu li a:hover {
+  background-color: #002d04;
+  color: white;
+}
+
+/* line 876, ../app/scss/_twentythirteen.scss */
+.nav-menu .sub-menu,
+.nav-menu .children {
+  background-color: #002d04;
+  border: 2px solid #eaefe4;
+  border-top: 0;
+  display: none;
+  padding: 0;
+  position: absolute;
+  left: -2px;
+  z-index: 99999;
+}
+
+/* line 888, ../app/scss/_twentythirteen.scss */
+.nav-menu .sub-menu ul,
+.nav-menu .children ul {
+  border-left: 0;
+  left: 100%;
+  top: 0;
+}
+
+/* line 895, ../app/scss/_twentythirteen.scss */
+ul.nav-menu ul a,
+.nav-menu ul ul a {
+  color: white;
+  margin: 0;
+  width: 200px;
+}
+
+/* line 902, ../app/scss/_twentythirteen.scss */
+ul.nav-menu ul a:hover,
+.nav-menu ul ul a:hover {
+  background-color: #db572f;
+}
+
+/* line 907, ../app/scss/_twentythirteen.scss */
+ul.nav-menu li:hover > ul,
+.nav-menu ul li:hover > ul {
+  display: block;
+}
+
+/* line 914, ../app/scss/_twentythirteen.scss */
+.nav-menu .current_page_item > a,
+.nav-menu .current_page_ancestor > a,
+.nav-menu .current-menu-item > a,
+.nav-menu .current-menu-ancestor > a {
+  color: #2b8609;
+  font-style: italic;
+}
+
+/* line 919, ../app/scss/_twentythirteen.scss */
+.menu-toggle {
+  display: none;
+}
+
+/* Navbar */
+/* line 924, ../app/scss/_twentythirteen.scss */
+.navbar {
+  background-color: #eaefe4;
+  margin: 0 auto;
+  max-width: 1600px;
+  width: 100%;
+}
+
+/* line 931, ../app/scss/_twentythirteen.scss */
+.site-header .search-form {
+  position: absolute;
+  right: 20px;
+  top: 1px;
+}
+
+/* line 937, ../app/scss/_twentythirteen.scss */
+.site-header .search-field {
+  background-color: transparent;
+  background-image: url(images/search-icon.png);
+  background-position: 5px center;
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  border: none;
+  cursor: pointer;
+  height: 37px;
+  margin: 3px 0;
+  padding: 0 0 0 34px;
+  position: relative;
+  -webkit-transition: width 400ms ease, background 400ms ease;
+  transition: width 400ms ease, background 400ms ease;
+  width: 0;
+}
+
+/* line 954, ../app/scss/_twentythirteen.scss */
+.site-header .search-field:focus {
+  background-color: white;
+  border: 2px solid #c3c0ab;
+  cursor: text;
+  outline: 0;
+  width: 230px;
+}
+
+/**
+ * 5.0 Content
+ * ----------------------------------------------------------------------------
+ */
+/* line 968, ../app/scss/_twentythirteen.scss */
+.hentry {
+  padding: 40px 0;
+}
+
+/* line 975, ../app/scss/_twentythirteen.scss */
+.entry-header,
+.entry-content,
+.entry-summary,
+.entry-meta {
+  margin: 0 auto;
+  max-width: 604px;
+  width: 100%;
+}
+
+/* line 984, ../app/scss/_twentythirteen.scss */
+.sidebar .entry-header,
+.sidebar .entry-content,
+.sidebar .entry-summary,
+.sidebar .entry-meta {
+  max-width: 1040px;
+  padding: 0 376px 0 60px;
+}
+
+/**
+ * 5.1 Entry Header
+ * ----------------------------------------------------------------------------
+ */
+/* line 995, ../app/scss/_twentythirteen.scss */
+.sidebar .entry-header .entry-meta {
+  padding: 0;
+}
+
+/* line 999, ../app/scss/_twentythirteen.scss */
+.entry-thumbnail img {
+  display: block;
+  margin: 0 auto 10px;
+}
+
+/* line 1004, ../app/scss/_twentythirteen.scss */
+.entry-header {
+  margin-bottom: 30px;
+}
+
+/* line 1008, ../app/scss/_twentythirteen.scss */
+.entry-title {
+  font-weight: normal;
+  margin: 0 0 5px;
+}
+
+/* line 1013, ../app/scss/_twentythirteen.scss */
+.entry-title a {
+  color: #142614;
+}
+
+/* line 1017, ../app/scss/_twentythirteen.scss */
+.entry-title a:hover {
+  color: #ea9629;
+}
+
+/**
+ * 5.2 Entry Meta
+ * ----------------------------------------------------------------------------
+ */
+/* line 1027, ../app/scss/_twentythirteen.scss */
+.entry-meta {
+  clear: both;
+  font-size: 14px;
+}
+
+/* line 1032, ../app/scss/_twentythirteen.scss */
+.entry-meta a {
+  color: #2b8609;
+}
+
+/* line 1036, ../app/scss/_twentythirteen.scss */
+.entry-meta a:hover {
+  color: #2b8609;
+}
+
+/* line 1040, ../app/scss/_twentythirteen.scss */
+.entry-meta > span {
+  margin-right: 20px;
+}
+
+/* line 1044, ../app/scss/_twentythirteen.scss */
+.entry-meta > span:last-child {
+  margin-right: 0;
+}
+
+/* line 1048, ../app/scss/_twentythirteen.scss */
+.featured-post:before {
+  content: "\f308";
+  margin-right: 2px;
+}
+
+/* line 1053, ../app/scss/_twentythirteen.scss */
+.entry-meta .date a:before {
+  content: "\f303";
+}
+
+/* line 1057, ../app/scss/_twentythirteen.scss */
+.comments-link a:before {
+  content: "\f300";
+  margin-right: 2px;
+  position: relative;
+  top: -1px;
+}
+
+/* line 1064, ../app/scss/_twentythirteen.scss */
+.entry-meta .author a:before {
+  content: "\f304";
+  position: relative;
+  top: -1px;
+}
+
+/* line 1070, ../app/scss/_twentythirteen.scss */
+.categories-links a:first-child:before {
+  content: "\f301";
+}
+
+/* line 1074, ../app/scss/_twentythirteen.scss */
+.tags-links a:first-child:before {
+  content: "\f302";
+  position: relative;
+  top: -1px;
+}
+
+/* line 1080, ../app/scss/_twentythirteen.scss */
+.edit-link a:before {
+  content: "\f411";
+  position: relative;
+  top: -1px;
+}
+
+/* line 1091, ../app/scss/_twentythirteen.scss */
+.single-author .entry-meta .author,
+.sticky.format-standard .entry-meta .date,
+.sticky.format-audio .entry-meta .date,
+.sticky.format-chat .entry-meta .date,
+.sticky.format-image .entry-meta .date,
+.sticky.format-gallery .entry-meta .date {
+  display: none;
+}
+
+/**
+ * 5.3 Entry Content
+ * ----------------------------------------------------------------------------
+ */
+/* line 1101, ../app/scss/_twentythirteen.scss */
+.entry-content {
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  word-wrap: break-word;
+}
+
+/* line 1110, ../app/scss/_twentythirteen.scss */
+.entry-content a,
+.comment-content a {
+  color: #2b8609;
+}
+
+/* line 1115, ../app/scss/_twentythirteen.scss */
+.entry-content a:hover,
+.comment-content a:hover {
+  color: #ea9629;
+}
+
+/* line 1119, ../app/scss/_twentythirteen.scss */
+.entry-content blockquote {
+  font-size: 24px;
+}
+
+/* line 1124, ../app/scss/_twentythirteen.scss */
+.entry-content blockquote cite,
+.entry-content blockquote small {
+  font-size: 16px;
+}
+
+/* line 1129, ../app/scss/_twentythirteen.scss */
+.entry-content img.alignleft,
+.entry-content .wp-caption.alignleft {
+  margin-left: -60px;
+}
+
+/* line 1134, ../app/scss/_twentythirteen.scss */
+.entry-content img.alignright,
+.entry-content .wp-caption.alignright {
+  margin-right: -60px;
+}
+
+/* line 1138, ../app/scss/_twentythirteen.scss */
+footer.entry-meta {
+  margin-top: 24px;
+}
+
+/* line 1142, ../app/scss/_twentythirteen.scss */
+.format-standard footer.entry-meta {
+  margin-top: 0;
+}
+
+/* Page links */
+/* line 1147, ../app/scss/_twentythirteen.scss */
+.page-links {
+  clear: both;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: normal;
+  line-height: 2.2;
+  margin: 20px 0;
+  text-transform: uppercase;
+}
+
+/* line 1158, ../app/scss/_twentythirteen.scss */
+.page-links a,
+.page-links > span {
+  background: white;
+  border: 1px solid white;
+  padding: 5px 10px;
+  text-decoration: none;
+}
+
+/* line 1169, ../app/scss/_twentythirteen.scss */
+.format-status .entry-content .page-links a,
+.format-gallery .entry-content .page-links a,
+.format-chat .entry-content .page-links a,
+.format-quote .entry-content .page-links a,
+.page-links a {
+  background: #e63f2a;
+  border: 1px solid #e63f2a;
+  color: white;
+}
+
+/* line 1181, ../app/scss/_twentythirteen.scss */
+.format-gallery .entry-content .page-links a:hover,
+.format-audio .entry-content .page-links a:hover,
+.format-status .entry-content .page-links a:hover,
+.format-video .entry-content .page-links a:hover,
+.format-chat .entry-content .page-links a:hover,
+.format-quote .entry-content .page-links a:hover,
+.page-links a:hover {
+  background: white;
+  color: #e63f2a;
+}
+
+/* line 1187, ../app/scss/_twentythirteen.scss */
+.format-status .entry-content .page-links > span,
+.format-quote .entry-content .page-links > span {
+  background: none;
+}
+
+/* line 1191, ../app/scss/_twentythirteen.scss */
+.page-links .page-links-title {
+  background: transparent;
+  border: none;
+  margin-right: 20px;
+  padding: 0;
+}
+
+/* Mediaelements */
+/* line 1200, ../app/scss/_twentythirteen.scss */
+.hentry .mejs-mediaelement,
+.hentry .mejs-container .mejs-controls {
+  background: #002d04;
+}
+
+/* line 1205, ../app/scss/_twentythirteen.scss */
+.hentry .mejs-controls .mejs-time-rail .mejs-time-loaded,
+.hentry .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
+  background: white;
+}
+
+/* line 1209, ../app/scss/_twentythirteen.scss */
+.hentry .mejs-controls .mejs-time-rail .mejs-time-current {
+  background: #ea9629;
+}
+
+/* line 1214, ../app/scss/_twentythirteen.scss */
+.hentry .mejs-controls .mejs-time-rail .mejs-time-total,
+.hentry .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total {
+  background: #595959;
+}
+
+/* line 1220, ../app/scss/_twentythirteen.scss */
+.hentry .mejs-controls .mejs-time-rail span,
+.hentry .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total,
+.hentry .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
+  border-radius: 0;
+}
+
+/**
+ * 5.4 Galleries
+ * ----------------------------------------------------------------------------
+ */
+/* line 1230, ../app/scss/_twentythirteen.scss */
+.gallery {
+  margin-bottom: 20px;
+  margin-left: -4px;
+}
+
+/* line 1235, ../app/scss/_twentythirteen.scss */
+.gallery-item {
+  float: left;
+  margin: 0 4px 4px 0;
+  overflow: hidden;
+  position: relative;
+}
+
+/* line 1245, ../app/scss/_twentythirteen.scss */
+.gallery-columns-1.gallery-size-medium,
+.gallery-columns-1.gallery-size-thumbnail,
+.gallery-columns-2.gallery-size-thumbnail,
+.gallery-columns-3.gallery-size-thumbnail {
+  display: table;
+  margin: 0 auto 20px;
+}
+
+/* line 1252, ../app/scss/_twentythirteen.scss */
+.gallery-columns-1 .gallery-item,
+.gallery-columns-2 .gallery-item,
+.gallery-columns-3 .gallery-item {
+  text-align: center;
+}
+
+/* line 1256, ../app/scss/_twentythirteen.scss */
+.gallery-columns-4 .gallery-item {
+  max-width: 23%;
+  max-width: -webkit-calc(25% - 4px);
+  max-width: calc(25% - 4px);
+}
+
+/* line 1262, ../app/scss/_twentythirteen.scss */
+.gallery-columns-5 .gallery-item {
+  max-width: 19%;
+  max-width: -webkit-calc(20% - 4px);
+  max-width: calc(20% - 4px);
+}
+
+/* line 1268, ../app/scss/_twentythirteen.scss */
+.gallery-columns-6 .gallery-item {
+  max-width: 15%;
+  max-width: -webkit-calc(16.7% - 4px);
+  max-width: calc(16.7% - 4px);
+}
+
+/* line 1274, ../app/scss/_twentythirteen.scss */
+.gallery-columns-7 .gallery-item {
+  max-width: 13%;
+  max-width: -webkit-calc(14.28% - 4px);
+  max-width: calc(14.28% - 4px);
+}
+
+/* line 1280, ../app/scss/_twentythirteen.scss */
+.gallery-columns-8 .gallery-item {
+  max-width: 11%;
+  max-width: -webkit-calc(12.5% - 4px);
+  max-width: calc(12.5% - 4px);
+}
+
+/* line 1286, ../app/scss/_twentythirteen.scss */
+.gallery-columns-9 .gallery-item {
+  max-width: 9%;
+  max-width: -webkit-calc(11.1% - 4px);
+  max-width: calc(11.1% - 4px);
+}
+
+/* line 1300, ../app/scss/_twentythirteen.scss */
+.gallery-columns-1 .gallery-item:nth-of-type(1n),
+.gallery-columns-2 .gallery-item:nth-of-type(2n),
+.gallery-columns-3 .gallery-item:nth-of-type(3n),
+.gallery-columns-4 .gallery-item:nth-of-type(4n),
+.gallery-columns-5 .gallery-item:nth-of-type(5n),
+.gallery-columns-6 .gallery-item:nth-of-type(6n),
+.gallery-columns-7 .gallery-item:nth-of-type(7n),
+.gallery-columns-8 .gallery-item:nth-of-type(8n),
+.gallery-columns-9 .gallery-item:nth-of-type(9n) {
+  margin-right: 0;
+}
+
+/* line 1304, ../app/scss/_twentythirteen.scss */
+.gallery-caption {
+  background-color: rgba(0, 0, 0, 0.7);
+  box-sizing: border-box;
+  color: white;
+  font-size: 14px;
+  line-height: 1.3;
+  margin: 0;
+  max-height: 50%;
+  opacity: 0;
+  padding: 2px 8px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: left;
+  -webkit-transition: opacity 400ms ease;
+  transition: opacity 400ms ease;
+  width: 100%;
+}
+
+/* line 1323, ../app/scss/_twentythirteen.scss */
+.gallery-caption:before {
+  box-shadow: 0 -10px 15px #000 inset;
+  content: "";
+  height: 100%;
+  min-height: 49px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+/* line 1334, ../app/scss/_twentythirteen.scss */
+.gallery-item:hover .gallery-caption {
+  opacity: 1;
+}
+
+/* line 1340, ../app/scss/_twentythirteen.scss */
+.gallery-columns-7 .gallery-caption,
+.gallery-columns-8 .gallery-caption,
+.gallery-columns-9 .gallery-caption {
+  display: none;
+}
+
+/**
+ * 5.5 Post Formats
+ * ----------------------------------------------------------------------------
+ */
+/* Aside */
+/* line 1351, ../app/scss/_twentythirteen.scss */
+.format-aside {
+  background-color: #eaefe4;
+}
+
+/* line 1359, ../app/scss/_twentythirteen.scss */
+.blog .format-aside:first-of-type,
+.single .format-aside:first-of-type,
+.format-aside + .format-aside,
+.format-aside + .format-link,
+.format-link + .format-aside {
+  box-shadow: inset 0 2px 2px rgba(173, 165, 105, 0.2);
+}
+
+/* line 1363, ../app/scss/_twentythirteen.scss */
+.format-aside .entry-meta {
+  margin-top: 0;
+}
+
+/* line 1367, ../app/scss/_twentythirteen.scss */
+.format-aside blockquote {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+/* line 1372, ../app/scss/_twentythirteen.scss */
+.format-aside cite {
+  font-size: 100%;
+  text-transform: none;
+}
+
+/* line 1377, ../app/scss/_twentythirteen.scss */
+.format-aside cite:before {
+  content: "\2014";
+  margin-right: 5px;
+}
+
+/* Audio */
+/* line 1383, ../app/scss/_twentythirteen.scss */
+.format-audio {
+  background-color: #db572f;
+}
+
+/* line 1387, ../app/scss/_twentythirteen.scss */
+.format-audio .entry-title {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* line 1392, ../app/scss/_twentythirteen.scss */
+.format-audio .entry-content:before {
+  content: "\f109";
+  float: left;
+  font-size: 64px;
+  position: relative;
+  top: 4px;
+}
+
+/* line 1403, ../app/scss/_twentythirteen.scss */
+.format-audio .entry-content a,
+.format-audio .entry-meta a,
+.format-audio .entry-content a:hover,
+.format-audio .entry-meta a:hover {
+  color: #fbfaf3;
+}
+
+/* line 1407, ../app/scss/_twentythirteen.scss */
+.format-audio .audio-content {
+  background: url(images/dotted-line.png) repeat-y left top;
+  background-size: 4px 4px;
+  float: right;
+  padding-left: 35px;
+  width: 80%;
+  width: -webkit-calc(100% - 85px);
+  width: calc(100% - 85px);
+}
+
+/* line 1417, ../app/scss/_twentythirteen.scss */
+.format-audio .wp-audio-shortcode {
+  height: 30px !important;
+  /* Override mediaelement.js style */
+  margin: 20px 0;
+  max-width: 400px !important;
+  /* Override mediaelement.js style */
+}
+
+/* line 1423, ../app/scss/_twentythirteen.scss */
+.format-audio audio {
+  max-width: 100% !important;
+  /* Avoid player width overflow. */
+}
+
+/* Chat */
+/* line 1428, ../app/scss/_twentythirteen.scss */
+.format-chat {
+  background-color: #eadaa6;
+}
+
+/* line 1432, ../app/scss/_twentythirteen.scss */
+.format-chat .entry-title {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* line 1438, ../app/scss/_twentythirteen.scss */
+.format-chat .entry-meta a,
+.format-chat .entry-content a {
+  color: #722d19;
+}
+
+/* line 1442, ../app/scss/_twentythirteen.scss */
+.format-chat .entry-meta .date a:before {
+  content: "\f108";
+  margin-right: 2px;
+}
+
+/* line 1447, ../app/scss/_twentythirteen.scss */
+.format-chat .entry-meta .author {
+  display: none;
+}
+
+/* line 1451, ../app/scss/_twentythirteen.scss */
+.format-chat .chat {
+  margin: 0;
+}
+
+/* line 1455, ../app/scss/_twentythirteen.scss */
+.format-chat .chat .chat-timestamp {
+  color: #722d19;
+  float: right;
+  font-size: 12px;
+  font-weight: normal;
+  margin: 5px 10px 0;
+}
+
+/* line 1463, ../app/scss/_twentythirteen.scss */
+.format-chat .chat .fn {
+  font-style: normal;
+}
+
+/* Gallery */
+/* line 1468, ../app/scss/_twentythirteen.scss */
+.format-gallery {
+  background-color: #fbca3c;
+}
+
+/* line 1472, ../app/scss/_twentythirteen.scss */
+.format-gallery .entry-header {
+  margin-bottom: 15px;
+}
+
+/* line 1476, ../app/scss/_twentythirteen.scss */
+.format-gallery .entry-title {
+  font-size: 50px;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* line 1483, ../app/scss/_twentythirteen.scss */
+.format-gallery .entry-meta a,
+.format-gallery .entry-content a {
+  color: #722d19;
+}
+
+/* Image */
+/* line 1488, ../app/scss/_twentythirteen.scss */
+.format-image .entry-title {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* line 1494, ../app/scss/_twentythirteen.scss */
+.format-image .categories-links,
+.format-image .tags-links {
+  display: none;
+}
+
+/* Link */
+/* line 1499, ../app/scss/_twentythirteen.scss */
+.format-link {
+  background-color: #eaefe4;
+}
+
+/* line 1504, ../app/scss/_twentythirteen.scss */
+.blog .format-link:first-of-type,
+.single .format-link:first-of-type {
+  box-shadow: inset 0 2px 2px rgba(173, 165, 105, 0.2);
+}
+
+/* line 1509, ../app/scss/_twentythirteen.scss */
+.format-link .entry-header,
+.format-link .entry-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* line 1513, ../app/scss/_twentythirteen.scss */
+.format-link .entry-title {
+  color: #2b8609;
+  display: inline;
+  font: 300 italic 20px "Source Sans Pro", Helvetica, sans-serif;
+  margin-right: 20px;
+}
+
+/* line 1520, ../app/scss/_twentythirteen.scss */
+.format-link .entry-title a {
+  color: #2b8609;
+}
+
+/* line 1524, ../app/scss/_twentythirteen.scss */
+.format-link div.entry-meta {
+  display: inline;
+}
+
+/* Quote */
+/* line 1529, ../app/scss/_twentythirteen.scss */
+.format-quote {
+  background-color: #210d10;
+}
+
+/* line 1534, ../app/scss/_twentythirteen.scss */
+.format-quote .entry-content,
+.format-quote .entry-meta {
+  color: #eaefe4;
+}
+
+/* line 1538, ../app/scss/_twentythirteen.scss */
+.format-quote .entry-content blockquote {
+  font-size: 28px;
+  margin: 0;
+}
+
+/* line 1545, ../app/scss/_twentythirteen.scss */
+.format-quote .entry-content a,
+.format-quote .entry-meta a,
+.format-quote .linked {
+  color: #e63f2a;
+}
+
+/* line 1549, ../app/scss/_twentythirteen.scss */
+.format-quote .entry-content cite a {
+  border-bottom: 1px dotted white;
+  color: white;
+}
+
+/* line 1554, ../app/scss/_twentythirteen.scss */
+.format-quote .entry-content cite a:hover {
+  text-decoration: none;
+}
+
+/* line 1559, ../app/scss/_twentythirteen.scss */
+.format-quote blockquote small,
+.format-quote blockquote cite {
+  display: block;
+  font-size: 16px;
+}
+
+/* line 1564, ../app/scss/_twentythirteen.scss */
+.format-quote blockquote {
+  font-style: italic;
+  font-weight: 300;
+  padding-left: 75px;
+  position: relative;
+}
+
+/* line 1571, ../app/scss/_twentythirteen.scss */
+.format-quote blockquote:before {
+  content: '\201C';
+  font-size: 140px;
+  font-weight: 400;
+  line-height: .8;
+  padding-right: 25px;
+  position: absolute;
+  left: -15px;
+  top: -3px;
+}
+
+/* line 1582, ../app/scss/_twentythirteen.scss */
+.format-quote .entry-meta .author {
+  display: none;
+}
+
+/* Status */
+/* line 1587, ../app/scss/_twentythirteen.scss */
+.format-status {
+  background-color: #722d19;
+  padding: 0;
+}
+
+/* line 1593, ../app/scss/_twentythirteen.scss */
+.format-status .entry-content,
+.format-status .entry-meta {
+  padding-left: 35px;
+  position: relative;
+}
+
+/* line 1598, ../app/scss/_twentythirteen.scss */
+.format-status .entry-content a {
+  color: #eadaa6;
+}
+
+/* line 1602, ../app/scss/_twentythirteen.scss */
+.format-status .entry-meta a {
+  color: #eaefe4;
+}
+
+/* line 1607, ../app/scss/_twentythirteen.scss */
+.sidebar .format-status .entry-content,
+.sidebar .format-status .entry-meta {
+  padding-left: 95px;
+}
+
+/* line 1612, ../app/scss/_twentythirteen.scss */
+.format-status .entry-content:before,
+.format-status .entry-meta:before {
+  background: url(images/dotted-line.png) repeat-y left bottom;
+  background-size: 4px 4px;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  left: 10px;
+  top: 0;
+  width: 1px;
+}
+
+/* line 1625, ../app/scss/_twentythirteen.scss */
+.sidebar .format-status .entry-content:before,
+.sidebar .format-status .entry-meta:before {
+  left: 70px;
+}
+
+/* line 1630, ../app/scss/_twentythirteen.scss */
+.format-status .categories-links,
+.format-status .tags-links {
+  display: none;
+}
+
+/* Ensures the dots in the dot background are in lockstep. */
+/* line 1635, ../app/scss/_twentythirteen.scss */
+.format-status .entry-meta:before {
+  background-position: left top;
+}
+
+/* line 1639, ../app/scss/_twentythirteen.scss */
+.format-status .entry-content {
+  color: #eaefe4;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 300;
+  padding-bottom: 30px;
+  padding-top: 40px;
+  position: relative;
+}
+
+/* line 1649, ../app/scss/_twentythirteen.scss */
+.format-status .entry-content p:first-child:before {
+  background-color: rgba(0, 0, 0, 0.65);
+  content: "";
+  height: 3px;
+  margin-top: 13px;
+  position: absolute;
+  left: 4px;
+  width: 13px;
+}
+
+/* line 1659, ../app/scss/_twentythirteen.scss */
+.sidebar .format-status .entry-content > p:first-child:before {
+  left: 64px;
+}
+
+/* line 1663, ../app/scss/_twentythirteen.scss */
+.format-status .entry-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* line 1667, ../app/scss/_twentythirteen.scss */
+.format-status .entry-meta {
+  margin-top: 0;
+  padding-bottom: 40px;
+}
+
+/* line 1672, ../app/scss/_twentythirteen.scss */
+.format-status .entry-meta .date a:before {
+  content: "\f105";
+}
+
+/* Video */
+/* line 1677, ../app/scss/_twentythirteen.scss */
+.format-video {
+  background-color: #db572f;
+}
+
+/* line 1684, ../app/scss/_twentythirteen.scss */
+.format-video .entry-content a,
+.format-video .entry-meta a,
+.format-video .entry-content a:hover,
+.format-video .entry-meta a:hover {
+  color: #fbfaf3;
+}
+
+/* line 1688, ../app/scss/_twentythirteen.scss */
+.format-video .entry-title {
+  font-size: 50px;
+  font-weight: 400;
+}
+
+/* line 1693, ../app/scss/_twentythirteen.scss */
+.format-video .entry-meta {
+  color: #002d04;
+}
+
+/**
+ * 5.6 Attachments
+ * ----------------------------------------------------------------------------
+ */
+/* line 1703, ../app/scss/_twentythirteen.scss */
+.attachment .hentry {
+  background-color: #d1dcc4;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 1709, ../app/scss/_twentythirteen.scss */
+.attachment .entry-header {
+  margin-bottom: 0;
+  max-width: 1040px;
+  padding: 30px 0;
+}
+
+/* line 1715, ../app/scss/_twentythirteen.scss */
+.attachment .entry-title {
+  display: inline-block;
+  float: left;
+  font: 300 italic 30px "Source Sans Pro", Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* line 1722, ../app/scss/_twentythirteen.scss */
+.attachment .entry-title:before {
+  content: "\f416";
+  font-size: 32px;
+  margin-right: 10px;
+}
+
+/* line 1728, ../app/scss/_twentythirteen.scss */
+.attachment .entry-meta {
+  clear: none;
+  color: inherit;
+  float: right;
+  max-width: 604px;
+  padding: 9px 0 0;
+  text-align: right;
+}
+
+/* line 1737, ../app/scss/_twentythirteen.scss */
+.hentry.attachment:not(.image-attachment) .entry-meta {
+  max-width: 104px;
+}
+
+/* line 1741, ../app/scss/_twentythirteen.scss */
+.attachment footer.entry-meta {
+  display: none;
+}
+
+/* line 1745, ../app/scss/_twentythirteen.scss */
+.attachment-meta:before {
+  content: "\f307";
+}
+
+/* line 1749, ../app/scss/_twentythirteen.scss */
+.full-size-link a:before {
+  content: "\f402";
+}
+
+/* line 1753, ../app/scss/_twentythirteen.scss */
+.full-size-link:before {
+  content: none;
+}
+
+/* line 1759, ../app/scss/_twentythirteen.scss */
+.attachment .entry-meta a,
+.attachment .entry-meta .edit-link:before,
+.attachment .full-size-link:before {
+  color: #2b8609;
+}
+
+/* line 1763, ../app/scss/_twentythirteen.scss */
+.attachment .entry-content {
+  background-color: #fff;
+  max-width: 100%;
+  padding: 40px 0;
+}
+
+/* line 1769, ../app/scss/_twentythirteen.scss */
+.image-navigation {
+  margin: 0 auto;
+  max-width: 1040px;
+  position: relative;
+}
+
+/* line 1775, ../app/scss/_twentythirteen.scss */
+.image-navigation a:hover {
+  text-decoration: none;
+}
+
+/* line 1780, ../app/scss/_twentythirteen.scss */
+.image-navigation .nav-previous,
+.image-navigation .nav-next {
+  position: absolute;
+  top: 50px;
+}
+
+/* line 1785, ../app/scss/_twentythirteen.scss */
+.image-navigation .nav-previous {
+  left: 0;
+}
+
+/* line 1789, ../app/scss/_twentythirteen.scss */
+.image-navigation .nav-next {
+  right: 0;
+}
+
+/* line 1793, ../app/scss/_twentythirteen.scss */
+.image-navigation .meta-nav {
+  font-size: 32px;
+  font-weight: 300;
+  vertical-align: -4px;
+}
+
+/* line 1800, ../app/scss/_twentythirteen.scss */
+.attachment .entry-attachment,
+.attachment .type-attachment p {
+  margin: 0 auto;
+  max-width: 724px;
+  text-align: center;
+}
+
+/* line 1806, ../app/scss/_twentythirteen.scss */
+.attachment .entry-attachment .attachment {
+  display: inline-block;
+}
+
+/* line 1810, ../app/scss/_twentythirteen.scss */
+.attachment .entry-caption {
+  text-align: left;
+}
+
+/* line 1814, ../app/scss/_twentythirteen.scss */
+.attachment .entry-description {
+  margin: 20px auto 0;
+  max-width: 604px;
+}
+
+/* line 1820, ../app/scss/_twentythirteen.scss */
+.attachment .entry-caption p:last-child,
+.attachment .entry-description p:last-child {
+  margin: 0;
+}
+
+/* line 1824, ../app/scss/_twentythirteen.scss */
+.attachment .site-main .sidebar-container {
+  display: none;
+}
+
+/**
+ * 5.7 Post/Paging Navigation
+ * ----------------------------------------------------------------------------
+ */
+/* line 1834, ../app/scss/_twentythirteen.scss */
+.navigation .nav-previous {
+  float: left;
+}
+
+/* line 1838, ../app/scss/_twentythirteen.scss */
+.navigation .nav-next {
+  float: right;
+}
+
+/* line 1842, ../app/scss/_twentythirteen.scss */
+.navigation a {
+  color: #2b8609;
+}
+
+/* line 1846, ../app/scss/_twentythirteen.scss */
+.navigation a:hover {
+  color: #ea9629;
+  text-decoration: none;
+}
+
+/* line 1851, ../app/scss/_twentythirteen.scss */
+.paging-navigation {
+  background-color: #eaefe4;
+  padding: 40px 0;
+}
+
+/* line 1856, ../app/scss/_twentythirteen.scss */
+.paging-navigation .nav-links {
+  margin: 0 auto;
+  max-width: 604px;
+  width: 100%;
+}
+
+/* line 1862, ../app/scss/_twentythirteen.scss */
+.sidebar .paging-navigation .nav-links {
+  max-width: 1040px;
+  padding: 0 376px 0 60px;
+}
+
+/* line 1867, ../app/scss/_twentythirteen.scss */
+.paging-navigation .nav-next {
+  padding: 13px 0;
+}
+
+/* line 1871, ../app/scss/_twentythirteen.scss */
+.paging-navigation a {
+  font-size: 22px;
+  font-style: italic;
+  font-weight: 300;
+}
+
+/* line 1877, ../app/scss/_twentythirteen.scss */
+.paging-navigation .meta-nav {
+  background-color: #2b8609;
+  border-radius: 50%;
+  color: white;
+  display: inline-block;
+  font-size: 26px;
+  padding: 3px 0 8px;
+  text-align: center;
+  width: 50px;
+}
+
+/* line 1888, ../app/scss/_twentythirteen.scss */
+.paging-navigation .nav-previous .meta-nav {
+  margin-right: 10px;
+  padding: 17px 0 23px;
+  width: 80px;
+}
+
+/* line 1894, ../app/scss/_twentythirteen.scss */
+.paging-navigation .nav-next .meta-nav {
+  margin-left: 10px;
+}
+
+/* line 1898, ../app/scss/_twentythirteen.scss */
+.paging-navigation a:hover .meta-nav {
+  background-color: #ea9629;
+  text-decoration: none;
+}
+
+/* line 1903, ../app/scss/_twentythirteen.scss */
+.post-navigation {
+  background-color: #fff;
+  color: #2b8609;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 300;
+  padding: 20px 0;
+}
+
+/* line 1912, ../app/scss/_twentythirteen.scss */
+.post-navigation .nav-links {
+  margin: 0 auto;
+  max-width: 1040px;
+}
+
+/* line 1917, ../app/scss/_twentythirteen.scss */
+.sidebar .post-navigation .nav-links {
+  padding: 0 376px 0 60px;
+}
+
+/* line 1921, ../app/scss/_twentythirteen.scss */
+.post-navigation a[rel="next"] {
+  float: right;
+  text-align: right;
+}
+
+/**
+ * 5.8 Author Bio
+ * ----------------------------------------------------------------------------
+ */
+/* line 1932, ../app/scss/_twentythirteen.scss */
+.author-info {
+  margin: 0 auto;
+  max-width: 604px;
+  padding: 30px 0 10px;
+  text-align: left;
+  /* gallery & video post formats */
+  width: 100%;
+}
+
+/* line 1940, ../app/scss/_twentythirteen.scss */
+.author.sidebar .author-info {
+  max-width: 1040px;
+  padding: 30px 376px 10px 60px;
+}
+
+/* line 1945, ../app/scss/_twentythirteen.scss */
+.single .author-info {
+  padding: 50px 0 0;
+}
+
+/* line 1949, ../app/scss/_twentythirteen.scss */
+.author-avatar .avatar {
+  float: left;
+  margin: 0 30px 30px 0;
+}
+
+/* line 1954, ../app/scss/_twentythirteen.scss */
+.single-format-status .author-description {
+  color: #eaefe4;
+}
+
+/* line 1958, ../app/scss/_twentythirteen.scss */
+.author-description .author-title {
+  clear: none;
+  font: 300 italic 20px "Source Sans Pro", Helvetica, sans-serif;
+  margin: 0 0 8px;
+}
+
+/* line 1964, ../app/scss/_twentythirteen.scss */
+.author-link {
+  color: #2b8609;
+  margin-left: 2px;
+}
+
+/* line 1969, ../app/scss/_twentythirteen.scss */
+.author.archive .author-link {
+  display: none;
+}
+
+/**
+ * 5.9 Archives
+ * ----------------------------------------------------------------------------
+ */
+/* line 1979, ../app/scss/_twentythirteen.scss */
+.archive-header {
+  background-color: #eaefe4;
+}
+
+/* line 1984, ../app/scss/_twentythirteen.scss */
+.archive-title,
+.archive-meta {
+  font: 300 italic 30px "Source Sans Pro", Helvetica, sans-serif;
+  margin: 0 auto;
+  max-width: 1040px;
+  padding: 30px 0;
+  width: 100%;
+}
+
+/* line 1992, ../app/scss/_twentythirteen.scss */
+.archive-meta {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: normal;
+  margin-top: -15px;
+  padding: 0 0 11px;
+}
+
+/* line 2000, ../app/scss/_twentythirteen.scss */
+.sidebar .archive-meta {
+  padding-right: 316px;
+}
+
+/**
+ * 5.10 Search Results/No posts
+ * ----------------------------------------------------------------------------
+ */
+/* line 2010, ../app/scss/_twentythirteen.scss */
+.page-header {
+  background-color: #d1dcc4;
+}
+
+/* line 2014, ../app/scss/_twentythirteen.scss */
+.page-title {
+  font: 300 italic 30px "Source Sans Pro", Helvetica, sans-serif;
+  margin: 0 auto;
+  max-width: 1040px;
+  padding: 30px 0;
+  width: 100%;
+}
+
+/* line 2022, ../app/scss/_twentythirteen.scss */
+.page-content {
+  margin: 0 auto;
+  max-width: 604px;
+  padding: 40px 0;
+  width: 100%;
+}
+
+/* line 2029, ../app/scss/_twentythirteen.scss */
+.sidebar .page-content {
+  margin: 0 auto;
+  max-width: 1040px;
+  padding: 40px 376px 40px 60px;
+}
+
+/**
+ * 5.11 404
+ * ----------------------------------------------------------------------------
+ */
+/* line 2041, ../app/scss/_twentythirteen.scss */
+.error404 .page-header {
+  background-color: #fff;
+}
+
+/* line 2045, ../app/scss/_twentythirteen.scss */
+.error404 .page-title {
+  line-height: 0.6;
+  margin: 0;
+  padding: 300px;
+  position: relative;
+  text-align: center;
+  width: auto;
+}
+
+/* line 2054, ../app/scss/_twentythirteen.scss */
+.error404 .page-title:before {
+  color: #d1dcc4;
+  content: "\f423";
+  font-size: 964px;
+  line-height: 0.6;
+  overflow: hidden;
+  position: absolute;
+  left: 7px;
+  top: 28px;
+}
+
+/* line 2065, ../app/scss/_twentythirteen.scss */
+.error404 .page-wrapper {
+  background-color: #d1dcc4;
+}
+
+/* line 2070, ../app/scss/_twentythirteen.scss */
+.error404 .page-header,
+.error404 .page-content {
+  margin: 0 auto;
+  max-width: 1040px;
+  padding-bottom: 40px;
+  width: 100%;
+}
+
+/**
+ * 5.12 Comments
+ * ----------------------------------------------------------------------------
+ */
+/* line 2088, ../app/scss/_twentythirteen.scss */
+.comments-title,
+.comment-list,
+.comment-reply-title,
+.must-log-in,
+.comment-respond .comment-form,
+.comment-respond iframe {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 604px;
+  width: 100%;
+}
+
+/* line 2101, ../app/scss/_twentythirteen.scss */
+.sidebar .comments-title,
+.sidebar .comment-list,
+.sidebar .must-log-in,
+.sidebar .comment-reply-title,
+.sidebar .comment-navigation,
+.sidebar .comment-respond .comment-form {
+  max-width: 1040px;
+  padding-left: 60px;
+  padding-right: 376px;
+}
+
+/* line 2107, ../app/scss/_twentythirteen.scss */
+.comments-title {
+  font: 300 italic 28px "Source Sans Pro", Helvetica, sans-serif;
+}
+
+/* line 2112, ../app/scss/_twentythirteen.scss */
+.comment-list,
+.comment-list .children {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* line 2117, ../app/scss/_twentythirteen.scss */
+.comment-list .children {
+  margin-left: 20px;
+}
+
+/* line 2122, ../app/scss/_twentythirteen.scss */
+.comment-list > li:after,
+.comment-list .children > li:before {
+  background: url(images/dotted-line.png) repeat left top;
+  background-size: 4px 4px;
+  content: "";
+  display: block;
+  height: 1px;
+  width: 100%;
+}
+
+/* line 2131, ../app/scss/_twentythirteen.scss */
+.comment-list > li:last-child:after {
+  display: none;
+}
+
+/* line 2135, ../app/scss/_twentythirteen.scss */
+.comment-body {
+  padding: 24px 0;
+  position: relative;
+}
+
+/* line 2140, ../app/scss/_twentythirteen.scss */
+.comment-author {
+  float: left;
+  max-width: 74px;
+}
+
+/* line 2145, ../app/scss/_twentythirteen.scss */
+.comment-author .avatar {
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* line 2150, ../app/scss/_twentythirteen.scss */
+.comment-author .fn {
+  word-wrap: break-word;
+}
+
+/* line 2157, ../app/scss/_twentythirteen.scss */
+.comment-author .fn,
+.comment-author .url,
+.comment-reply-link,
+.comment-reply-login {
+  color: #2b8609;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* line 2164, ../app/scss/_twentythirteen.scss */
+.says {
+  display: none;
+}
+
+/* line 2168, ../app/scss/_twentythirteen.scss */
+.no-avatars .comment-author {
+  margin: 0 0 5px;
+  max-width: 100%;
+  position: relative;
+}
+
+/* line 2176, ../app/scss/_twentythirteen.scss */
+.no-avatars .comment-metadata,
+.no-avatars .comment-content,
+.no-avatars .comment-list .reply {
+  width: 100%;
+}
+
+/* line 2180, ../app/scss/_twentythirteen.scss */
+.bypostauthor > .comment-body .fn:before {
+  content: "\f408";
+  vertical-align: text-top;
+}
+
+/* line 2185, ../app/scss/_twentythirteen.scss */
+.comment-list .edit-link {
+  margin-left: 20px;
+}
+
+/* line 2192, ../app/scss/_twentythirteen.scss */
+.comment-metadata,
+.comment-awaiting-moderation,
+.comment-content,
+.comment-list .reply {
+  float: right;
+  width: 79%;
+  width: -webkit-calc(100% - 124px);
+  width: calc(100% - 124px);
+  word-wrap: break-word;
+}
+
+/* line 2201, ../app/scss/_twentythirteen.scss */
+.comment-meta,
+.comment-meta a {
+  color: #a2a2a2;
+  font-size: 13px;
+}
+
+/* line 2206, ../app/scss/_twentythirteen.scss */
+.comment-meta a:hover {
+  color: #ea9629;
+}
+
+/* line 2210, ../app/scss/_twentythirteen.scss */
+.comment-metadata {
+  margin-bottom: 20px;
+}
+
+/* line 2214, ../app/scss/_twentythirteen.scss */
+.ping-meta {
+  color: #a2a2a2;
+  font-size: 13px;
+  line-height: 2;
+}
+
+/* line 2220, ../app/scss/_twentythirteen.scss */
+.comment-awaiting-moderation {
+  color: #a2a2a2;
+}
+
+/* line 2224, ../app/scss/_twentythirteen.scss */
+.comment-awaiting-moderation:before {
+  content: "\f414";
+  margin-right: 5px;
+  position: relative;
+  top: -2px;
+}
+
+/* line 2232, ../app/scss/_twentythirteen.scss */
+.comment-reply-link:before,
+.comment-reply-login:before {
+  content: "\f412";
+  margin-right: 3px;
+}
+
+/* Comment form */
+/* line 2238, ../app/scss/_twentythirteen.scss */
+.comment-respond {
+  background-color: #eaefe4;
+  padding: 30px 0;
+}
+
+/* line 2243, ../app/scss/_twentythirteen.scss */
+.comment .comment-respond {
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+/* line 2248, ../app/scss/_twentythirteen.scss */
+.comment-reply-title {
+  font: 300 italic 28px "Source Sans Pro", Helvetica, sans-serif;
+}
+
+/* line 2252, ../app/scss/_twentythirteen.scss */
+.comment-reply-title small a {
+  color: #131310;
+  display: inline-block;
+  float: right;
+  height: 16px;
+  overflow: hidden;
+  width: 16px;
+}
+
+/* line 2261, ../app/scss/_twentythirteen.scss */
+.comment-reply-title small a:hover {
+  color: #ed331c;
+  text-decoration: none;
+}
+
+/* line 2266, ../app/scss/_twentythirteen.scss */
+.comment-reply-title small a:before {
+  content: "\f406";
+  vertical-align: top;
+}
+
+/* line 2272, ../app/scss/_twentythirteen.scss */
+.sidebar .comment-list .comment-reply-title,
+.sidebar .comment-list .comment-respond .comment-form {
+  padding: 0;
+}
+
+/* line 2276, ../app/scss/_twentythirteen.scss */
+.comment-form .comment-notes {
+  margin-bottom: 15px;
+}
+
+/* line 2282, ../app/scss/_twentythirteen.scss */
+.comment-form .comment-form-author,
+.comment-form .comment-form-email,
+.comment-form .comment-form-url {
+  margin-bottom: 8px;
+}
+
+/* line 2289, ../app/scss/_twentythirteen.scss */
+.comment-form [for="author"],
+.comment-form [for="email"],
+.comment-form [for="url"],
+.comment-form [for="comment"] {
+  float: left;
+  padding: 5px 0;
+  width: 120px;
+}
+
+/* line 2295, ../app/scss/_twentythirteen.scss */
+.comment-form .required {
+  color: #ed331c;
+}
+
+/* line 2301, ../app/scss/_twentythirteen.scss */
+.comment-form input[type="text"],
+.comment-form input[type="email"],
+.comment-form input[type="url"] {
+  max-width: 270px;
+  width: 60%;
+}
+
+/* line 2306, ../app/scss/_twentythirteen.scss */
+.comment-form textarea {
+  width: 100%;
+}
+
+/* line 2311, ../app/scss/_twentythirteen.scss */
+.form-allowed-tags,
+.form-allowed-tags code {
+  color: #686758;
+  font-size: 12px;
+}
+
+/* line 2316, ../app/scss/_twentythirteen.scss */
+.form-allowed-tags code {
+  font-size: 10px;
+  margin-left: 3px;
+}
+
+/* line 2322, ../app/scss/_twentythirteen.scss */
+.comment-list .pingback,
+.comment-list .trackback {
+  padding-top: 24px;
+}
+
+/* line 2326, ../app/scss/_twentythirteen.scss */
+.comment-navigation {
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 300;
+  margin: 0 auto;
+  max-width: 604px;
+  padding: 20px 0 30px;
+  width: 100%;
+}
+
+/* line 2336, ../app/scss/_twentythirteen.scss */
+.no-comments {
+  background-color: #eaefe4;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 300;
+  margin: 0;
+  padding: 40px 0;
+  text-align: center;
+}
+
+/* line 2346, ../app/scss/_twentythirteen.scss */
+.sidebar .no-comments {
+  padding-left: 60px;
+  padding-right: 376px;
+}
+
+/**
+ * 5.13 Multisite
+ * ----------------------------------------------------------------------------
+ */
+/* line 2357, ../app/scss/_twentythirteen.scss */
+.site-main .mu_register {
+  margin: 0 auto;
+  max-width: 604px;
+  width: 100%;
+}
+
+/* line 2363, ../app/scss/_twentythirteen.scss */
+.mu_alert {
+  margin-top: 25px;
+}
+
+/* line 2371, ../app/scss/_twentythirteen.scss */
+.site-main .mu_register input[type="submit"],
+.site-main .mu_register #blog_title,
+.site-main .mu_register #user_email,
+.site-main .mu_register #blogname,
+.site-main .mu_register #user_name {
+  font-size: inherit;
+  width: 270px;
+}
+
+/* line 2376, ../app/scss/_twentythirteen.scss */
+.site-main .mu_register input[type="submit"] {
+  width: auto;
+}
+
+/**
+ * 6.0 Sidebar
+ * ----------------------------------------------------------------------------
+ */
+/* line 2386, ../app/scss/_twentythirteen.scss */
+.site-main .widget-area {
+  float: right;
+  width: 300px;
+}
+
+/**
+ * 6.1 Widgets
+ * ----------------------------------------------------------------------------
+ */
+/* line 2397, ../app/scss/_twentythirteen.scss */
+.widget {
+  background-color: rgba(247, 245, 231, 0.7);
+  font-size: 14px;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  margin: 0 0 24px;
+  padding: 20px;
+  word-wrap: break-word;
+}
+
+/* line 2409, ../app/scss/_twentythirteen.scss */
+.widget .widget-title {
+  font: 300 italic 20px "Source Sans Pro", Helvetica, sans-serif;
+  margin: 0 0 10px;
+}
+
+/* line 2415, ../app/scss/_twentythirteen.scss */
+.widget ul,
+.widget ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 2421, ../app/scss/_twentythirteen.scss */
+.widget li {
+  padding: 5px 0;
+}
+
+/* line 2425, ../app/scss/_twentythirteen.scss */
+.widget .children li:last-child {
+  padding-bottom: 0;
+}
+
+/* line 2430, ../app/scss/_twentythirteen.scss */
+.widget li > ul,
+.widget li > ol {
+  margin-left: 20px;
+}
+
+/* line 2434, ../app/scss/_twentythirteen.scss */
+.widget a {
+  color: #2b8609;
+}
+
+/* line 2438, ../app/scss/_twentythirteen.scss */
+.widget a:hover {
+  color: #ea9629;
+}
+
+/* Search widget */
+/* line 2443, ../app/scss/_twentythirteen.scss */
+.search-form .search-submit {
+  display: none;
+}
+
+/* RSS Widget */
+/* line 2448, ../app/scss/_twentythirteen.scss */
+.widget_rss .rss-date {
+  display: block;
+}
+
+/* line 2453, ../app/scss/_twentythirteen.scss */
+.widget_rss .rss-date,
+.widget_rss li > cite {
+  color: #a2a2a2;
+}
+
+/* Calendar Widget */
+/* line 2459, ../app/scss/_twentythirteen.scss */
+.widget_calendar table,
+.widget_calendar td {
+  border: 0;
+  border-collapse: separate;
+  border-spacing: 1px;
+}
+
+/* line 2465, ../app/scss/_twentythirteen.scss */
+.widget_calendar caption {
+  font-size: 14px;
+  margin: 0;
+}
+
+/* line 2471, ../app/scss/_twentythirteen.scss */
+.widget_calendar th,
+.widget_calendar td {
+  padding: 0;
+  text-align: center;
+}
+
+/* line 2476, ../app/scss/_twentythirteen.scss */
+.widget_calendar a {
+  display: block;
+}
+
+/* line 2480, ../app/scss/_twentythirteen.scss */
+.widget_calendar a:hover {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+/* line 2484, ../app/scss/_twentythirteen.scss */
+.widget_calendar tbody td {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* line 2488, ../app/scss/_twentythirteen.scss */
+.site-footer .widget_calendar tbody td {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* line 2492, ../app/scss/_twentythirteen.scss */
+.widget_calendar tbody .pad, .site-footer .widget_calendar tbody .pad {
+  background-color: transparent;
+}
+
+/**
+ * 7.0 Footer
+ * ----------------------------------------------------------------------------
+ */
+/* line 2502, ../app/scss/_twentythirteen.scss */
+.site-footer {
+  background-color: #d1dcc4;
+  color: #686758;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* line 2510, ../app/scss/_twentythirteen.scss */
+.site-footer .widget-area,
+.sidebar .site-footer {
+  text-align: left;
+}
+
+/* line 2514, ../app/scss/_twentythirteen.scss */
+.site-footer a {
+  color: #686758;
+}
+
+/* line 2518, ../app/scss/_twentythirteen.scss */
+.site-footer .sidebar-container {
+  background-color: #002d04;
+  padding: 20px 0;
+}
+
+/* line 2523, ../app/scss/_twentythirteen.scss */
+.site-footer .widget-area {
+  margin: 0 auto;
+  max-width: 1040px;
+  width: 100%;
+}
+
+/* line 2529, ../app/scss/_twentythirteen.scss */
+.sidebar .site-footer .widget-area {
+  max-width: 724px;
+  position: relative;
+  left: -158px;
+}
+
+/* line 2535, ../app/scss/_twentythirteen.scss */
+.site-footer .widget {
+  background: transparent;
+  color: white;
+  float: left;
+  margin-right: 20px;
+  width: 245px;
+}
+
+/* line 2543, ../app/scss/_twentythirteen.scss */
+.sidebar .site-footer .widget {
+  width: 228px;
+}
+
+/* line 2548, ../app/scss/_twentythirteen.scss */
+.sidebar .site-footer .widget:nth-of-type(4),
+.sidebar .site-footer .widget:nth-of-type(3) {
+  margin-right: 0;
+}
+
+/* line 2552, ../app/scss/_twentythirteen.scss */
+.site-footer .widget a {
+  color: #e6402a;
+}
+
+/* line 2558, ../app/scss/_twentythirteen.scss */
+.site-footer .widget-title,
+.site-footer .widget-title a,
+.site-footer .wp-caption-text {
+  color: white;
+}
+
+/* line 2562, ../app/scss/_twentythirteen.scss */
+.site-info {
+  margin: 0 auto;
+  max-width: 1040px;
+  padding: 30px 0;
+  width: 100%;
+}
+
+/* line 2569, ../app/scss/_twentythirteen.scss */
+#wpstats {
+  display: block;
+  margin: -10px auto 0;
+}
+
+/**
+ * 8.0 Media Queries
+ * ----------------------------------------------------------------------------
+ */
+@media (max-width: 1599px) {
+  /* line 2581, ../app/scss/_twentythirteen.scss */
+  .site {
+    border: 0;
+  }
+}
+@media (max-width: 1069px) {
+  /* line 2588, ../app/scss/_twentythirteen.scss */
+  .sidebar img.alignleft,
+  .sidebar .wp-caption.alignleft {
+    margin-left: 0;
+  }
+
+  /* line 2593, ../app/scss/_twentythirteen.scss */
+  .sidebar img.alignright,
+  .sidebar .wp-caption.alignright {
+    margin-right: 0;
+  }
+
+  /* line 2597, ../app/scss/_twentythirteen.scss */
+  .error404 .page-header {
+    margin-left: auto;
+    max-width: 604px;
+    width: 100%;
+  }
+
+  /* line 2614, ../app/scss/_twentythirteen.scss */
+  .archive-header,
+  .search .page-header,
+  .archive .page-header,
+  .blog .page-header,
+  .error404 .page-content,
+  .search .page-content,
+  .archive .page-content,
+  .attachment .entry-header,
+  .attachment .entry-content,
+  .post-navigation .nav-links,
+  .sidebar .site-info,
+  .site-footer .widget-area {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  /* line 2619, ../app/scss/_twentythirteen.scss */
+  .error404 .page-title {
+    font-size: 24px;
+    padding: 180px;
+  }
+
+  /* line 2624, ../app/scss/_twentythirteen.scss */
+  .error404 .page-title:before {
+    font-size: 554px;
+  }
+
+  /* line 2628, ../app/scss/_twentythirteen.scss */
+  .attachment .image-navigation {
+    max-width: 724px;
+  }
+
+  /* line 2633, ../app/scss/_twentythirteen.scss */
+  .image-navigation .nav-previous,
+  .image-navigation .nav-next {
+    position: static;
+  }
+
+  /* line 2637, ../app/scss/_twentythirteen.scss */
+  .site-main .widget-area {
+    margin-right: 60px;
+  }
+}
+@media (max-width: 999px) {
+  /* line 2653, ../app/scss/_twentythirteen.scss */
+  .sidebar .entry-header,
+  .sidebar .entry-content,
+  .sidebar .entry-summary,
+  .sidebar .entry-meta,
+  .sidebar .comment-list,
+  .sidebar .comment-reply-title,
+  .sidebar .comment-navigation,
+  .sidebar .comment-respond .comment-form,
+  .sidebar .featured-gallery,
+  .sidebar .post-navigation .nav-links,
+  .author.sidebar .author-info {
+    max-width: 604px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* line 2663, ../app/scss/_twentythirteen.scss */
+  .sidebar .site-info,
+  .search.sidebar .page-content,
+  .blog.sidebar .page-content,
+  .attachment .entry-header,
+  .sidebar .comments-title {
+    max-width: 604px;
+  }
+
+  /* line 2673, ../app/scss/_twentythirteen.scss */
+  .sidebar .archive-meta,
+  .attachment .entry-header,
+  .search.sidebar .page-content,
+  .blog.sidebar .page-content,
+  .sidebar .site-info,
+  .sidebar .comments-title,
+  .sidebar .no-comments {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* line 2678, ../app/scss/_twentythirteen.scss */
+  .attachment .entry-meta {
+    float: left;
+    text-align: left;
+    width: 100%;
+  }
+
+  /* line 2684, ../app/scss/_twentythirteen.scss */
+  .attachment .entry-content {
+    max-width: 100%;
+    padding: 40px 0;
+  }
+
+  /* line 2689, ../app/scss/_twentythirteen.scss */
+  .format-status .entry-content {
+    padding-top: 40px;
+  }
+
+  /* line 2693, ../app/scss/_twentythirteen.scss */
+  .format-status .entry-meta {
+    padding-bottom: 40px;
+  }
+
+  /* line 2698, ../app/scss/_twentythirteen.scss */
+  .sidebar .format-status .entry-content,
+  .sidebar .format-status .entry-meta {
+    padding-left: 35px;
+  }
+
+  /* line 2703, ../app/scss/_twentythirteen.scss */
+  .sidebar .format-status .entry-content:before,
+  .sidebar .format-status .entry-meta:before {
+    left: 10px;
+  }
+
+  /* line 2707, ../app/scss/_twentythirteen.scss */
+  .sidebar .format-status .entry-content p:first-child:before {
+    left: 4px;
+  }
+
+  /* line 2711, ../app/scss/_twentythirteen.scss */
+  .sidebar .paging-navigation .nav-links {
+    padding: 0 60px;
+  }
+
+  /* line 2715, ../app/scss/_twentythirteen.scss */
+  .site-main .sidebar-container {
+    height: auto;
+    margin: 0 auto;
+    max-width: 604px;
+    position: relative;
+    top: 20px;
+  }
+
+  /* line 2723, ../app/scss/_twentythirteen.scss */
+  .site-main .widget-area {
+    float: none;
+    margin: 0;
+    width: 100%;
+  }
+
+  /* line 2729, ../app/scss/_twentythirteen.scss */
+  .sidebar .site-footer .widget-area {
+    max-width: 100%;
+    left: 0;
+  }
+}
+/* Collapse oversized image and pulled images after iPad breakpoint. */
+@media (max-width: 767px) {
+  /* line 2738, ../app/scss/_twentythirteen.scss */
+  .entry-content img.alignleft,
+  .entry-content .wp-caption.alignleft {
+    margin-left: 0;
+  }
+
+  /* line 2743, ../app/scss/_twentythirteen.scss */
+  .entry-content img.alignright,
+  .entry-content .wp-caption.alignright {
+    margin-right: 0;
+  }
+
+  /* line 2748, ../app/scss/_twentythirteen.scss */
+  .attachment .image-navigation,
+  .attachment .entry-attachment .attachment {
+    max-width: 604px;
+    padding: 0;
+    width: 100%;
+  }
+
+  /* line 2754, ../app/scss/_twentythirteen.scss */
+  .gallery-caption {
+    display: none;
+  }
+}
+@media (max-width: 643px) {
+  /* line 2760, ../app/scss/_twentythirteen.scss */
+  .site-title {
+    font-size: 30px;
+  }
+
+  /* line 2779, ../app/scss/_twentythirteen.scss */
+  #content .entry-header,
+  #content .entry-content,
+  #content .entry-summary,
+  #content footer.entry-meta,
+  #content .featured-gallery,
+  .search.sidebar .page-content,
+  .blog.sidebar .page-content,
+  .sidebar .post-navigation .nav-links,
+  .paging-navigation .nav-links,
+  #content .author-info,
+  .comments-area .comments-title,
+  .comments-area .comment-list,
+  .comments-area .comment-navigation,
+  .comment-respond,
+  .sidebar .site-info,
+  .sidebar .paging-navigation .nav-links {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  /* line 2785, ../app/scss/_twentythirteen.scss */
+  #content .format-status .entry-content,
+  #content .format-status .entry-met {
+    padding-left: 35px;
+  }
+
+  /* Small menu */
+  /* line 2790, ../app/scss/_twentythirteen.scss */
+  .menu-toggle {
+    cursor: pointer;
+    display: inline-block;
+    font: bold 16px/1.3 "Source Sans Pro", Helvetica, sans-serif;
+    margin: 0;
+    padding: 12px 0 12px 20px;
+  }
+
+  /* line 2798, ../app/scss/_twentythirteen.scss */
+  .menu-toggle:after {
+    content: "\f502";
+    font-size: 12px;
+    padding-left: 8px;
+    vertical-align: -4px;
+  }
+
+  /* line 2805, ../app/scss/_twentythirteen.scss */
+  .toggled-on .menu-toggle:after {
+    content: "\f500";
+    vertical-align: 2px;
+  }
+
+  /* line 2811, ../app/scss/_twentythirteen.scss */
+  .toggled-on .nav-menu,
+  .toggled-on .nav-menu > ul {
+    display: block;
+    margin-left: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  /* line 2819, ../app/scss/_twentythirteen.scss */
+  .toggled-on li,
+  .toggled-on .children {
+    display: block;
+  }
+
+  /* line 2823, ../app/scss/_twentythirteen.scss */
+  .toggled-on .nav-menu li > ul {
+    background-color: transparent;
+    display: block;
+    float: none;
+    margin-left: 20px;
+    position: relative;
+    left: auto;
+    top: auto;
+  }
+
+  /* line 2833, ../app/scss/_twentythirteen.scss */
+  .toggled-on .nav-menu li > ul a {
+    color: #142614;
+    width: auto;
+  }
+
+  /* line 2839, ../app/scss/_twentythirteen.scss */
+  .toggled-on .nav-menu li:hover > a,
+  .toggled-on .nav-menu .children a {
+    background-color: transparent;
+    color: #142614;
+  }
+
+  /* line 2845, ../app/scss/_twentythirteen.scss */
+  .toggled-on .nav-menu li a:hover,
+  .toggled-on .nav-menu ul a:hover {
+    background-color: #db572f;
+    color: white;
+  }
+
+  /* line 2851, ../app/scss/_twentythirteen.scss */
+  ul.nav-menu,
+  div.nav-menu > ul {
+    display: none;
+  }
+
+  /* line 2855, ../app/scss/_twentythirteen.scss */
+  #content .featured-gallery {
+    padding-left: 24px;
+  }
+
+  /* line 2859, ../app/scss/_twentythirteen.scss */
+  .gallery-columns-1 .gallery-item {
+    margin-right: 0;
+    width: 100%;
+  }
+
+  /* line 2868, ../app/scss/_twentythirteen.scss */
+  .entry-title,
+  .format-chat .entry-title,
+  .format-image .entry-title,
+  .format-gallery .entry-title,
+  .format-video .entry-title {
+    font-size: 22px;
+    font-weight: bold;
+  }
+
+  /* line 2874, ../app/scss/_twentythirteen.scss */
+  .format-quote blockquote,
+  .format-status .entry-content {
+    font-size: 18px;
+  }
+
+  /* line 2879, ../app/scss/_twentythirteen.scss */
+  .format-quote blockquote small,
+  .format-quote blockquote cite {
+    font-size: 13px;
+  }
+
+  /* line 2883, ../app/scss/_twentythirteen.scss */
+  .error404 .page-title {
+    padding: 40px 0 0;
+  }
+
+  /* line 2887, ../app/scss/_twentythirteen.scss */
+  .error404 .page-title:before {
+    content: normal;
+  }
+
+  /* line 2891, ../app/scss/_twentythirteen.scss */
+  .comment-author {
+    margin-right: 30px;
+  }
+
+  /* line 2895, ../app/scss/_twentythirteen.scss */
+  .comment-author .avatar {
+    height: auto;
+    max-width: 100%;
+  }
+
+  /* line 2902, ../app/scss/_twentythirteen.scss */
+  .comment-metadata,
+  .comment-content,
+  .comment-list .reply {
+    width: 70%;
+    width: -webkit-calc(100% - 104px);
+    width: calc(100% - 104px);
+  }
+
+  /* line 2910, ../app/scss/_twentythirteen.scss */
+  .comment-form input[type="text"],
+  .comment-form input[type="email"],
+  .comment-form input[type="url"] {
+    width: -webkit-calc(100% - 120px);
+    width: calc(100% - 120px);
+  }
+
+  /* line 2915, ../app/scss/_twentythirteen.scss */
+  .comment-form textarea {
+    height: 80px;
+    /* Smaller field for mobile. */
+  }
+
+  /* Audio */
+  /* line 2920, ../app/scss/_twentythirteen.scss */
+  .format-audio .entry-content:before {
+    display: none;
+  }
+
+  /* line 2924, ../app/scss/_twentythirteen.scss */
+  .format-audio .audio-content {
+    background-image: none;
+    float: none;
+    padding-left: 0;
+    width: auto;
+  }
+}
+/* Mobile devices */
+@media (max-width: 359px) {
+  /* line 2934, ../app/scss/_twentythirteen.scss */
+  .gallery {
+    margin-left: 0;
+  }
+
+  /* line 2939, ../app/scss/_twentythirteen.scss */
+  .gallery .gallery-item,
+  .gallery-columns-2.gallery-size-thumbnail .gallery-item {
+    max-width: none;
+    width: 49%;
+    width: -webkit-calc(50% - 4px);
+    width: calc(50% - 4px);
+  }
+
+  /* line 2949, ../app/scss/_twentythirteen.scss */
+  .gallery-columns-1.gallery-size-medium,
+  .gallery-columns-1.gallery-size-thumbnail,
+  .gallery-columns-2.gallery-size-thumbnail,
+  .gallery-columns-3.gallery-size-thumbnail {
+    display: block;
+  }
+
+  /* line 2955, ../app/scss/_twentythirteen.scss */
+  .gallery-columns-1 .gallery-item,
+  .gallery-columns-1.gallery-size-medium .gallery-item,
+  .gallery-columns-1.gallery-size-thumbnail .gallery-item {
+    text-align: center;
+    width: 98%;
+    width: -webkit-calc(100% - 4px);
+    width: calc(100% - 4px);
+  }
+
+  /* line 2965, ../app/scss/_twentythirteen.scss */
+  .gallery-columns-3 .gallery-item:nth-of-type(3n),
+  .gallery-columns-5 .gallery-item:nth-of-type(5n),
+  .gallery-columns-7 .gallery-item:nth-of-type(7n),
+  .gallery-columns-9 .gallery-item:nth-of-type(9n) {
+    margin-right: 4px;
+  }
+
+  /* line 2969, ../app/scss/_twentythirteen.scss */
+  .gallery br {
+    display: none;
+  }
+
+  /* line 2973, ../app/scss/_twentythirteen.scss */
+  .gallery .gallery-item:nth-of-type(even) {
+    margin-right: 0;
+  }
+
+  /* Comments */
+  /* line 2978, ../app/scss/_twentythirteen.scss */
+  .comment-author {
+    margin: 0 0 5px;
+    max-width: 100%;
+  }
+
+  /* line 2983, ../app/scss/_twentythirteen.scss */
+  .comment-author .avatar {
+    display: inline;
+    margin: 0 5px 0 0;
+    max-width: 20px;
+  }
+
+  /* line 2991, ../app/scss/_twentythirteen.scss */
+  .comment-metadata,
+  .comment-content,
+  .comment-list .reply {
+    width: 100%;
+  }
+}
+/**
+ * 9.0 Print
+ * ----------------------------------------------------------------------------
+ */
+/* Retina-specific styles. */
+@media print, (-o-min-device-pixel-ratio: 5 / 4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+  /* line 3008, ../app/scss/_twentythirteen.scss */
+  .site-header .search-field {
+    background-image: url(images/search-icon-2x.png);
+  }
+
+  /* line 3016, ../app/scss/_twentythirteen.scss */
+  .format-audio .audio-content,
+  .format-status .entry-content:before,
+  .format-status .entry-meta:before,
+  .comment-list > li:after,
+  .comment-list .children > li:before {
+    background-image: url(images/dotted-line-2x.png);
+  }
+}
+@media print {
+  /* line 3022, ../app/scss/_twentythirteen.scss */
+  body {
+    background: none !important;
+    color: #000;
+    font-size: 10pt;
+  }
+
+  /* line 3029, ../app/scss/_twentythirteen.scss */
+  footer a[rel="bookmark"]:link:after,
+  footer a[rel="bookmark"]:visited:after {
+    content: " [" attr(href) "] ";
+    /* Show URLs */
+  }
+
+  /* line 3033, ../app/scss/_twentythirteen.scss */
+  .site {
+    max-width: 98%;
+  }
+
+  /* line 3037, ../app/scss/_twentythirteen.scss */
+  .site-header {
+    background-image: none !important;
+  }
+
+  /* line 3041, ../app/scss/_twentythirteen.scss */
+  .site-header .home-link {
+    max-width: none;
+    min-height: 0;
+  }
+
+  /* line 3046, ../app/scss/_twentythirteen.scss */
+  .site-title {
+    color: #000;
+    font-size: 21pt;
+  }
+
+  /* line 3051, ../app/scss/_twentythirteen.scss */
+  .site-description {
+    font-size: 10pt;
+  }
+
+  /* line 3067, ../app/scss/_twentythirteen.scss */
+  .author-avatar,
+  .site-footer,
+  .comment-respond,
+  .comments-area .comment-edit-link,
+  .comments-area .reply,
+  .comments-link,
+  .entry-meta .edit-link,
+  .page-links,
+  .site-content nav,
+  .widget-area,
+  .main-navigation,
+  .navbar,
+  .more-link {
+    display: none;
+  }
+
+  /* line 3074, ../app/scss/_twentythirteen.scss */
+  .entry-header,
+  .entry-content,
+  .entry-summary,
+  .entry-meta {
+    margin: 0;
+    width: 100%;
+  }
+
+  /* line 3080, ../app/scss/_twentythirteen.scss */
+  .page-title,
+  .entry-title {
+    font-size: 21pt;
+  }
+
+  /* line 3085, ../app/scss/_twentythirteen.scss */
+  .entry-meta,
+  .entry-meta a {
+    color: #444;
+    font-size: 10pt;
+  }
+
+  /* line 3091, ../app/scss/_twentythirteen.scss */
+  .entry-content img.alignleft,
+  .entry-content .wp-caption.alignleft {
+    margin-left: 0;
+  }
+
+  /* line 3096, ../app/scss/_twentythirteen.scss */
+  .entry-content img.alignright,
+  .entry-content .wp-caption.alignright {
+    margin-right: 0;
+  }
+
+  /* line 3100, ../app/scss/_twentythirteen.scss */
+  .format-image .entry-content .size-full {
+    margin: 0;
+  }
+
+  /* Remove colors from post formats */
+  /* line 3105, ../app/scss/_twentythirteen.scss */
+  .hentry {
+    background-color: #fff;
+  }
+
+  /* Comments */
+  /* line 3110, ../app/scss/_twentythirteen.scss */
+  .comments-area > li.comment {
+    background: none;
+    position: relative;
+    width: auto;
+  }
+
+  /* line 3116, ../app/scss/_twentythirteen.scss */
+  .comment-metadata {
+    float: none;
+  }
+
+  /* line 3122, ../app/scss/_twentythirteen.scss */
+  .comment-author .fn,
+  .comment-reply-link,
+  .comment-reply-login {
+    color: #333;
+  }
+}
+/* line 1, ../app/scss/_footer.scss */
+.final-thoughts {
+  margin: 0 auto;
+  padding: 0 12px;
+  padding-top: 50px;
+  text-align: left;
+  max-width: 930px;
+}
+@media (max-width: 789px) {
+  /* line 1, ../app/scss/_footer.scss */
+  .final-thoughts {
+    max-width: 500px;
+  }
+}
+/* line 13, ../app/scss/_footer.scss */
+.final-thoughts a:link:hover, .final-thoughts a:link, .final-thoughts a:visited:hover, .final-thoughts a:visited, .final-thoughts a:hover, .final-thoughts a {
+  text-decoration: underline;
+}
+/* line 18, ../app/scss/_footer.scss */
+.final-thoughts .sponsors:before {
+  content: '';
+  display: block;
+  width: 310px;
+  height: 174px;
+  float: left;
+  background: url("images/playhouse_pic.jpg");
+  margin-right: 12px;
+  margin-top: 5px;
+  max-width: 100%;
+}
+@media (max-width: 789px) {
+  /* line 18, ../app/scss/_footer.scss */
+  .final-thoughts .sponsors:before {
+    float: none;
+    margin: 24px auto;
+  }
+}
+/* line 34, ../app/scss/_footer.scss */
+.final-thoughts .sponsor {
+  overflow: hidden;
+  *zoom: 1;
+  position: relative;
+  font-size: 0.7em;
+  min-height: 55px;
+  margin-bottom: 6px;
+}
+@media (min-width: 644px) {
+  /* line 34, ../app/scss/_footer.scss */
+  .final-thoughts .sponsor {
+    padding-left: 126px;
+  }
+  /* line 45, ../app/scss/_footer.scss */
+  .final-thoughts .sponsor p {
+    margin-bottom: 4px;
+  }
+}
+/* line 50, ../app/scss/_footer.scss */
+.final-thoughts .sponsor img {
+  float: left;
+  margin-right: 6px;
+  margin-bottom: 6px;
+}
+@media (min-width: 644px) {
+  /* line 50, ../app/scss/_footer.scss */
+  .final-thoughts .sponsor img {
+    position: absolute;
+    left: 0;
+    margin: auto;
+  }
+}
+
+/* line 64, ../app/scss/_footer.scss */
+.site-info {
+  text-align: center;
+}
+/* line 67, ../app/scss/_footer.scss */
+.site-info a:link:hover, .site-info a:link, .site-info a:visited:hover, .site-info a:visited, .site-info a:hover, .site-info a {
+  text-decoration: underline;
+}
+
+/* line 1, ../app/scss/_hero-slideshow.scss */
+#hero-slideshow {
+  width: 100%;
+  max-width: 900px;
+  margin: 20px auto;
+  overflow: hidden;
+  position: relative;
+  border: 24px solid white;
+  border-bottom-width: 36px;
+  background: #eaefe4;
+  padding: 0;
+}
+/* line 13, ../app/scss/_hero-slideshow.scss */
+#hero-slideshow:after {
+  padding-top: 56.25%;
+  display: block;
+  content: '';
+}
+/* line 19, ../app/scss/_hero-slideshow.scss */
+#hero-slideshow .slide {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  /*fill parent*/
+  display: none;
+  text-decoration: none;
+  color: #142614;
+}
+/* line 26, ../app/scss/_hero-slideshow.scss */
+#hero-slideshow .slide.active {
+  display: block;
+}
+/* line 29, ../app/scss/_hero-slideshow.scss */
+#hero-slideshow .slide img {
+  max-width: 100%;
+  margin: auto;
+}
+
+/* line 1, ../app/scss/_front-page.scss */
+#special-announcements {
+  max-width: 900px;
+  margin: 20px auto;
+}
+/* line 6, ../app/scss/_front-page.scss */
+#special-announcements .entry-header.entry-title {
+  font-size: 1.3em;
+}
+@media (min-width: 644px) {
+  /* line 6, ../app/scss/_front-page.scss */
+  #special-announcements .entry-header.entry-title {
+    display: inline;
+  }
+}
+@media (min-width: 644px) {
+  /* line 14, ../app/scss/_front-page.scss */
+  #special-announcements .entry-summary {
+    display: inline;
+  }
+  /* line 17, ../app/scss/_front-page.scss */
+  #special-announcements .entry-summary p:first-child {
+    display: inline;
+  }
+}
+/* line 22, ../app/scss/_front-page.scss */
+#special-announcements .hentry {
+  padding: 40px;
+  border-left: 4px solid green;
+}
+@media (max-width: 643px) {
+  /* line 22, ../app/scss/_front-page.scss */
+  #special-announcements .hentry {
+    padding: 20px 0px;
+  }
+}
+
+/* line 17, ../app/scss/style.scss */
+.group {
+  overflow: hidden;
+  *zoom: 1;
+}
+
+/* line 21, ../app/scss/style.scss */
+.hide {
+  display: none;
+}
+
+/* line 24, ../app/scss/style.scss */
+h1.entry-title {
+  text-align: center;
+}
+
+/* line 27, ../app/scss/style.scss */
+.author {
+  display: none;
+}
+
+/* line 30, ../app/scss/style.scss */
+.entry-content {
+  overflow: hidden;
+  *zoom: 1;
+}
+
+/* line 33, ../app/scss/style.scss */
+.sponsor-image {
+  float: right;
+  margin: 10px;
+}
+
+/* line 37, ../app/scss/style.scss */
+.navbar {
+  background-color: #d1dcc4;
+}
+
+/* line 40, ../app/scss/style.scss */
+header#masthead {
+  background: #fff !important;
+}
+@media (min-width: 644px) {
+  /* line 43, ../app/scss/style.scss */
+  header#masthead #navbar {
+    margin-top: 24px;
+  }
+}
+/* line 47, ../app/scss/style.scss */
+header#masthead .home-link {
+  min-height: 0px;
+}
+/* line 51, ../app/scss/style.scss */
+header#masthead .group {
+  max-width: 1080px;
+  margin: auto;
+}
+/* line 55, ../app/scss/style.scss */
+header#masthead a.home-link {
+  max-width: 700px;
+}
+@media (min-width: 644px) {
+  /* line 55, ../app/scss/style.scss */
+  header#masthead a.home-link {
+    width: 75%;
+  }
+}
+/* line 63, ../app/scss/style.scss */
+header#masthead a.home-link.tickets-available {
+  margin: 0;
+  float: left;
+}
+@media (max-width: 643px) {
+  /* line 63, ../app/scss/style.scss */
+  header#masthead a.home-link.tickets-available {
+    float: none;
+  }
+}
+/* line 70, ../app/scss/style.scss */
+header#masthead a.home-link img {
+  width: 100%;
+}
+/* line 73, ../app/scss/style.scss */
+header#masthead a.home-link h2 {
+  padding-left: 8%;
+}
+@media (max-width: 643px) {
+  /* line 73, ../app/scss/style.scss */
+  header#masthead a.home-link h2 {
+    display: none;
+  }
+}
+/* line 83, ../app/scss/style.scss */
+header#masthead .get-tickets {
+  margin: 0 20px 20px;
+  text-align: center;
+}
+/* line 87, ../app/scss/style.scss */
+header#masthead .get-tickets br {
+  display: none;
+}
+@media (min-width: 644px) {
+  /* line 83, ../app/scss/style.scss */
+  header#masthead .get-tickets {
+    padding-right: 20px;
+    margin: 0;
+    margin-top: 80px;
+    float: left;
+    width: 25%;
+  }
+}
+
+/* line 101, ../app/scss/style.scss */
+.site {
+  background-color: #eaefe4;
+}
+
+/* line 104, ../app/scss/style.scss */
+.hentry {
+  background-color: #fff;
+  margin: 20px auto;
+  padding: 40px 6px;
+}
+
+/* line 110, ../app/scss/style.scss */
+.phone-number {
+  font-size: 1.5em;
+  display: block;
+}
+
+/*
+.blog, .archive{
+	background-color: $subtle-bg;
+	.hentry{
+		@include experimental-value('width', 'calc(100% - 40px)');
+		margin: 0 auto 20px;
+		box-shadow:2px 2px 5px darken($subtle-bg, 5%);
+		background-color: #fff;
+		max-width:680px;
+	}
+	.site-content{
+		background-color: $subtle-bg;
+		padding-bottom: 1px;
+	}
+}
+*/

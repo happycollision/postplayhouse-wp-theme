@@ -1,0 +1,24 @@
+{
+  "name": "postplayhousechild",
+  "version": "0.0.0",
+  "authors": [
+    "Don Denton <don@happycollision.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bower-compass-core": "~0.0.1",
+    "modernizr": "~2.7.2"
+  },
+  "dependencies": {
+    "lowFloat": "https://github.com/gilly3/lowFloat.git"
+  }
+}

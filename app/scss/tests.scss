@@ -1,0 +1,36 @@
+@import "base";
+.responsive-test{
+	position: fixed;
+	top:55px;
+	left:10px;
+	z-index: 99999;
+	
+	div{
+		float:left;
+		margin-right: 5px;
+		height: 16px;
+		width: 16px;
+		display:none;
+		@include border-radius(8px);
+		
+		&.papa-bear{
+			background-color: #c81f1f;
+			@include break(papa-bear-up){
+				display: block;
+			}
+		}
+		&.mama-bear{
+			background-color: #d8c81c;
+			@include break(mama-bear-up){
+				display: block;
+			}
+		}
+		&.baby-bear{
+			background-color: #20c939;
+			@include break(baby-bear-up){
+				display: block;
+			}
+		}
+		
+	}
+}

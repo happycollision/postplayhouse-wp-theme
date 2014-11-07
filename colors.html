@@ -1,0 +1,47 @@
+<html>
+<head>
+	<style>
+		.create{
+			color:  
+		}
+		div{
+			height: 125px;
+			width: 200px;
+			position: relative;
+			float: left;
+			margin: 2em;
+			
+		}
+		span{
+			position: absolute;
+			text-align: center;
+			color: #ccc;
+			background-color: rgba(0,0,0,0.5);
+			left:0;
+			right: 0;
+			bottom: 0;
+			padding: 3px;
+		}
+	</style>
+</head>
+<body>
+	<script type="text/javascript">
+		var colors = [
+			"#164516",
+			"#dfeed4",
+			"#2b8609",
+			"#eaefe4",
+			"33912b",
+			"#002d04"
+		];
+		
+		
+		
+		
+		
+		for(var i = 0; i < colors.length; i++){
+			document.write('<div style="background-color:'+colors[i]+'"><span>'+colors[i]+'</span></div>')
+		}
+	</script>
+</body>
+</html>

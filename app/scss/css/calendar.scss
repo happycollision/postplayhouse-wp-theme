@@ -1,0 +1,123 @@
+@import "../base";
+
+$cal-subtle: #aaa;
+.entry-content{
+	max-width:1000px;
+	padding:0 20px;
+}
+.calendar, .calendar tr, .calendar td{
+	box-sizing: border-box;
+	margin-bottom: 4em;
+}
+.month_name{
+	font-size: 2em;
+	text-align: center;
+	margin-top: 40px;
+}
+.month{
+	width: 100%;
+	margin: 10px auto;
+}
+.week{
+	clear: both;
+}
+.day{
+	width:auto;
+	min-width: 14%;
+	padding:0.5%;
+	border:1px solid $cal-subtle;
+	background:rgba(255,255,255,0.3);
+	min-height: 14%;
+
+	.month_name{
+		display: none;
+		font-size: 1em;
+		color: $cal-subtle;
+		@include break(baby-bear-down){
+			display: inline;
+		}
+	}
+}
+.calendar{ 
+	a, a:link, a:visited{
+		color:$article-link-hover;
+	}
+}
+.day_name{
+	display:none;
+	color: $cal-subtle;
+}
+.day.dark{
+	background:$greenish-grey;
+}
+.day.padding{
+	background:transparent;
+	border:none;
+}
+.day.padding .mday{
+	display: none;
+}
+.week:first-child .day .day_name{
+	display: inline;
+}
+.mday{
+	float:right;
+	font-size: 0.9em;
+	color: $cal-subtle;
+}
+.day_content{
+	clear: both;
+	font-size: 0.7em;
+	line-height: 1.3em;
+}
+.showing{
+	margin-bottom: 1em;
+}
+.extra_show_info{
+	margin: 20px auto;
+}
+
+@include break(baby-bear-down){
+	.calendar{
+		tbody, table, tr, td{
+			display:block;
+			margin:0;
+			border: none;
+		}
+		.day{
+			border: none;
+			background: none;
+			margin-bottom: 2em;
+		}
+		.padding, .dark{
+			display: none;
+		}
+		.day_name{
+			display: inline;
+
+			&:after{
+				content: ',';
+			}
+		}
+		.day_content {
+			border-top: 2px solid $light-green;
+			font-size: 1.5em;
+		}
+		.mday{
+			float:none;
+		}
+		.showing{
+			padding-left: 1.5em;
+			margin-bottom: 0.8em;
+		}
+		.show_time{
+			display: block;
+			//padding-left:1em;
+			color: lighten($main-text, 40%);
+			
+		}
+		.past {
+			display: none;
+		}
+	}
+}

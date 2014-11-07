@@ -1,0 +1,130 @@
+/*
+ Theme Name:   Post Playhouse (Twenty Thirteen tweaks)
+ Description:  Twenty Thirteen Child Theme
+ Author:       Don Denton, Happy Collision
+ Author URI:   http://happycollision.com
+ Template:     twentythirteen
+ Version:      3.0.0
+ Text Domain:  twenty-thirteen-child
+*/
+
+@import "base";
+@import "twentythirteen";
+@import "footer";
+@import "hero-slideshow";
+@import "front-page";
+
+.group{ @include clearfix; }
+.button{
+	@extend button;
+}
+.hide{
+	display: none;
+}
+h1.entry-title{
+	text-align: center;
+}
+.author{
+	display: none;
+}
+.entry-content{
+	@include clearfix;
+}
+.sponsor-image{
+	float: right;
+	margin: 10px;
+}
+.navbar {
+	background-color: $subtle-bg-alt;
+}
+header#masthead {
+	background: #fff !important;
+	@include break(mama-bear-up){
+		#navbar{
+			margin-top: 24px;
+		}
+	}
+	.home-link {
+		min-height: 0px;
+	}
+	// Happens to hold the nameplate and the buy tix button
+	.group {
+		max-width: 1080px;
+		margin: auto;
+	}
+	a.home-link{
+		max-width: 700px;
+
+		@include break(mama-bear-up){
+			width:75%;		
+		}
+
+
+		&.tickets-available{
+			margin: 0;
+			float: left;
+			@include break(baby-bear-down){
+				float: none;
+			}
+		}
+		img{
+			width: 100%;
+		}
+		h2{
+			padding-left: 8%;
+			@include break(baby-bear-down){
+				display: none;
+			}
+		}
+		h1{
+			@extend .screen-reader-text;
+		}
+	}
+	.get-tickets{
+		margin: 0 20px 20px;
+		text-align: center;
+
+		br{
+			display: none;
+		}
+		
+		@include break(mama-bear-up){
+			padding-right: 20px;
+			margin:0;
+			margin-top: 80px;
+			float: left;
+			width: 25%;
+		}
+	}
+
+}
+.site{
+	background-color: $subtle-bg;
+}
+.hentry{
+	background-color: #fff;
+	margin: 20px auto;
+	padding: 40px 6px;
+}
+
+.phone-number{
+	font-size: 1.5em;
+	display: block;
+}
+
+/*
+.blog, .archive{
+	background-color: $subtle-bg;
+	.hentry{
+		@include experimental-value('width', 'calc(100% - 40px)');
+		margin: 0 auto 20px;
+		box-shadow:2px 2px 5px darken($subtle-bg, 5%);
+		background-color: #fff;
+		max-width:680px;
+	}
+	.site-content{
+		background-color: $subtle-bg;
+		padding-bottom: 1px;
+	}
+}
+*/

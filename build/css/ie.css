@@ -1,0 +1,406 @@
+/*/
+$test-color: #444;
+
+$main-text: $test-color;
+$main-bg: $test-color;
+$subtle-bg: $test-color;
+$subtle-border: $test-color;
+$button: $test-color;
+$button-hover: $test-color;
+$button-tint: $test-color;
+$button-hover-tint: $test-color;
+$button-edge: $test-color;
+$pop-bg: $test-color;
+$pop-bg-text: $test-color;
+$subtle-bg-subtle-text: $test-color;
+$article-link: $test-color;
+$article-link-hover: $test-color;
+$pop-bg-link: $test-color;
+$pop-bg-link-hover: $test-color;
+$nav-sub-bg-hover: $test-color;
+$subtle-bg-border-focus: $test-color;
+$button-text: $test-color;
+$input-placeholder: $test-color;
+$main-bg-border: $test-color;
+$alt-link-bg: $test-color;
+$alt-link: $test-color;
+$transparent-dark: $test-color;
+$transparent-dark-complimentary-text: $test-color;
+$transparent-pop-shadow: $test-color;
+$subtle-bg-alt: $test-color;
+$table-border-color: $test-color;
+$article-link-visited: $test-color;
+/**/
+/*/
+$test-color: #444;
+
+$main-text: $test-color;
+$main-bg: $test-color;
+$subtle-bg: $test-color;
+$subtle-border: $test-color;
+$button: $test-color;
+$button-hover: $test-color;
+$button-tint: $test-color;
+$button-hover-tint: $test-color;
+$button-edge: $test-color;
+$pop-bg: $test-color;
+$pop-bg-text: $test-color;
+$subtle-bg-subtle-text: $test-color;
+$article-link: $test-color;
+$article-link-hover: $test-color;
+$pop-bg-link: $test-color;
+$pop-bg-link-hover: $test-color;
+$nav-sub-bg-hover: $test-color;
+$subtle-bg-border-focus: $test-color;
+$button-text: $test-color;
+$input-placeholder: $test-color;
+$main-bg-border: $test-color;
+$alt-link-bg: $test-color;
+$alt-link: $test-color;
+$transparent-dark: $test-color;
+$transparent-dark-complimentary-text: $test-color;
+$transparent-pop-shadow: $test-color;
+$subtle-bg-alt: $test-color;
+$table-border-color: $test-color;
+$article-link-visited: $test-color;
+/**/
+/* line 1, ../../app/scss/_typography.scss */
+.show_title {
+  font-style: italic;
+}
+
+/*
+Styles for older IE versions (previous to IE9).
+*/
+/* line 6, ../../app/scss/css/ie.scss */
+.site {
+  min-width: 1040px;
+}
+
+/* line 24, ../../app/scss/css/ie.scss */
+.genericon:before:hover,
+.menu-toggle:after:hover,
+.date a:before:hover,
+.entry-meta .author a:before:hover,
+.format-audio .entry-content:before:hover,
+.comments-link a:before:hover,
+.tags-links a:first-child:before:hover,
+.categories-links a:first-child:before:hover,
+.edit-link > a:before:hover,
+.attachment-meta:before:hover,
+.attachment-meta a:before:hover,
+.comment-awaiting-moderation:before:hover,
+.comment-reply-link:before:hover,
+.comment-reply-title small a:before:hover,
+.bypostauthor > .comment-body .fn:before:hover {
+  text-decoration: none;
+}
+
+/* line 29, ../../app/scss/css/ie.scss */
+.nav-menu .sub-menu ul,
+.nav-menu .children ul {
+  left: 100%;
+}
+
+/* line 33, ../../app/scss/css/ie.scss */
+.site-header .home-link {
+  max-width: 1040px;
+}
+
+/* line 38, ../../app/scss/css/ie.scss */
+.site-header .search-form [type="search"],
+.site-header .search-form [type="text"] {
+  padding-top: 6px;
+}
+
+/* line 42, ../../app/scss/css/ie.scss */
+img.alignright {
+  margin-right: 0;
+}
+
+/* line 46, ../../app/scss/css/ie.scss */
+img.alignleft {
+  margin-left: 0;
+}
+
+/* line 50, ../../app/scss/css/ie.scss */
+.site-main .sidebar-inner {
+  width: 1040px;
+}
+
+/* line 54, ../../app/scss/css/ie.scss */
+.site-main .widget-area {
+  margin-right: 60px;
+}
+
+/* line 58, ../../app/scss/css/ie.scss */
+.format-image .entry-content .size-full {
+  margin: 0;
+  max-width: 604px;
+}
+
+/* line 65, ../../app/scss/css/ie.scss */
+.gallery-columns-1 .gallery-item,
+.gallery-columns-2 .gallery-item,
+.gallery-columns-3 .gallery-item {
+  max-width: none;
+}
+
+/* line 69, ../../app/scss/css/ie.scss */
+.gallery img {
+  width: auto;
+}
+
+/* line 73, ../../app/scss/css/ie.scss */
+.gallery-caption {
+  background: #000;
+  filter: alpha(opacity=0);
+}
+
+/* line 78, ../../app/scss/css/ie.scss */
+.gallery-item:hover .gallery-caption {
+  filter: alpha(opacity=70);
+}
+
+/* line 82, ../../app/scss/css/ie.scss */
+.comment {
+  clear: both;
+}
+
+/* line 88, ../../app/scss/css/ie.scss */
+.comment-meta,
+.comment-content,
+.comment-list .reply {
+  width: 480px;
+}
+
+/* line 94, ../../app/scss/css/ie.scss */
+.depth-2 .comment-meta,
+.depth-2 .comment-content,
+.comment-list .depth-2 .reply {
+  width: 460px;
+}
+
+/* line 100, ../../app/scss/css/ie.scss */
+.depth-3 .comment-meta,
+.depth-3 .comment-content,
+.comment-list .depth-3 .reply {
+  width: 440px;
+}
+
+/* line 106, ../../app/scss/css/ie.scss */
+.depth-4 .comment-meta,
+.depth-4 .comment-content,
+.comment-list .depth-4 .reply {
+  width: 420px;
+}
+
+/* line 112, ../../app/scss/css/ie.scss */
+.depth-5 .comment-meta,
+.depth-5 .comment-content,
+.comment-list .depth-5 .reply {
+  width: 400px;
+}
+
+/* line 116, ../../app/scss/css/ie.scss */
+.comment-meta {
+  margin-bottom: 0;
+}
+
+/* line 120, ../../app/scss/css/ie.scss */
+.widget {
+  background: #eaefe4;
+}
+
+/* line 124, ../../app/scss/css/ie.scss */
+.site-footer .widget {
+  background: none;
+}
+
+/* Internet Explorer 8 */
+/* line 129, ../../app/scss/css/ie.scss */
+.ie8 .site {
+  border: 0;
+}
+
+/* line 134, ../../app/scss/css/ie.scss */
+.ie8 img.size-full,
+.ie8 img.size-large {
+  height: auto;
+  width: auto;
+}
+
+/* line 142, ../../app/scss/css/ie.scss */
+.ie8 .sidebar .entry-header,
+.ie8 .sidebar .entry-content,
+.ie8 .sidebar .entry-summary,
+.ie8 .sidebar .entry-meta {
+  max-width: 724px;
+}
+
+/* line 146, ../../app/scss/css/ie.scss */
+.ie8 .author-info {
+  margin-left: 0;
+}
+
+/* line 150, ../../app/scss/css/ie.scss */
+.ie8 .paging-navigation .nav-previous .meta-nav {
+  padding: 5px 0 8px;
+  width: 40px;
+}
+
+/* line 155, ../../app/scss/css/ie.scss */
+.ie8 .paging-navigation .nav-next {
+  line-height: 1;
+}
+
+/* line 160, ../../app/scss/css/ie.scss */
+.ie8 .format-status .entry-content:before,
+.ie8 .format-status .entry-meta:before {
+  content: none;
+}
+
+/* line 164, ../../app/scss/css/ie.scss */
+.ie8 .site-main .widget-area {
+  margin-right: 0;
+}
+
+/* Internet Explorer 7 */
+/* line 171, ../../app/scss/css/ie.scss */
+.ie7 audio,
+.ie7 canvas,
+.ie7 video {
+  display: inline;
+  zoom: 1;
+}
+
+/* line 176, ../../app/scss/css/ie.scss */
+.ie7 legend {
+  margin-left: -7px;
+}
+
+/* line 183, ../../app/scss/css/ie.scss */
+.ie7 button,
+.ie7 input,
+.ie7 select,
+.ie7 textarea {
+  vertical-align: middle;
+}
+
+/* line 190, ../../app/scss/css/ie.scss */
+.ie7 button,
+.ie7 input[type="button"],
+.ie7 input[type="reset"],
+.ie7 input[type="submit"] {
+  overflow: visible;
+}
+
+/* line 195, ../../app/scss/css/ie.scss */
+.ie7 input[type="checkbox"],
+.ie7 input[type="radio"] {
+  height: 13px;
+  width: 13px;
+}
+
+/* line 200, ../../app/scss/css/ie.scss */
+.ie7 .screen-reader-text {
+  clip: rect(1px 1px 1px 1px);
+  /* IE7 */
+}
+
+/* line 204, ../../app/scss/css/ie.scss */
+.ie7 .site-header {
+  position: relative;
+  z-index: 1;
+}
+
+/* line 209, ../../app/scss/css/ie.scss */
+.ie7 .main-navigation {
+  max-width: 930px;
+  padding-right: 150px;
+}
+
+/* line 215, ../../app/scss/css/ie.scss */
+.ie7 .nav-menu li a,
+.ie7 .nav-menu li {
+  display: block;
+  float: left;
+}
+
+/* line 220, ../../app/scss/css/ie.scss */
+.ie7 .nav-menu ul {
+  top: 40px;
+}
+
+/* line 224, ../../app/scss/css/ie.scss */
+.ie7 .nav-menu li ul ul {
+  left: 100%;
+  top: 0;
+}
+
+/* line 230, ../../app/scss/css/ie.scss */
+.ie7 .site-header .search-form [type="search"],
+.ie7 .site-header .search-form [type="text"] {
+  background-color: #fff;
+  border: 2px solid #c3c0ab;
+  cursor: text;
+  height: 28px;
+  outline: 0;
+  width: 150px;
+}
+
+/* line 242, ../../app/scss/css/ie.scss */
+.ie7 .entry-header,
+.ie7 .entry-content,
+.ie7 .entry-summary,
+.ie7 .entry-meta {
+  width: 604px;
+}
+
+/* line 247, ../../app/scss/css/ie.scss */
+.ie7 .format-status .entry-content,
+.ie7 .format-status .entry-meta {
+  padding-left: 60px;
+}
+
+/* line 252, ../../app/scss/css/ie.scss */
+.ie7 .sidebar .format-status .entry-content,
+.ie7 .sidebar .format-status .entry-meta {
+  padding-left: 60px;
+}
+
+/* line 257, ../../app/scss/css/ie.scss */
+.ie7 .sidebar .post-navigation .nav-links,
+.ie7 .sidebar .paging-navigation .nav-links {
+  width: 604px;
+}
+
+/* line 261, ../../app/scss/css/ie.scss */
+.ie7 .paging-navigation .meta-nav {
+  padding: 0 0 10px;
+  vertical-align: middle;
+  width: 40px;
+}
+
+/* line 270, ../../app/scss/css/ie.scss */
+.ie7 .comments-title,
+.ie7 .comment-list,
+.ie7 .comment-reply-title,
+.ie7 .comment-respond .comment-form {
+  width: 604px;
+}
+
+/* line 274, ../../app/scss/css/ie.scss */
+.ie7 .site-footer .widget-area {
+  max-width: none;
+  left: auto;
+}
+
+/* RTL for Internet Explorer 7 & 8 */
+/* line 282, ../../app/scss/css/ie.scss */
+.rtl .format-audio .entry-content:before,
+.rtl .comment-reply-link:before,
+.rtl .comment-reply-login:before {
+  -ms-filter: "FlipH";
+  filter: FlipH;
+}

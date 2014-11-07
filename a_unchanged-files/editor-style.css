@@ -1,0 +1,207 @@
+@charset "utf-8";
+/* CSS Document */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+	background: transparent;
+}
+body {
+	line-height: 1;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+	clear: both;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote {
+	quotes: none;
+}
+blockquote:before, blockquote:after {
+	content: '';
+	content: none;
+}
+del {
+	text-decoration: line-through;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a img { border: none; }
+
+
+/*--------------------Begin Actual Styles----------------------------------*/
+
+body {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	color: #000000;
+}
+p {
+    margin-bottom: 1em;
+}
+img {
+	border-style: none;
+}
+h5{
+        color: #a87324;
+        font-family: arial, sans-serif;
+        font-weight:bold;
+		font-size: 1.2em;
+		text-align:center;
+		border-bottom:2px solid #a87324;
+		margin-bottom:8px;
+}
+h6{
+        color: #06f;
+        font-family: arial, sans-serif;
+        font-style: italic;
+        font-size: 0.9em;
+        #font-variant: small-caps;
+}
+.anchor {
+	clear:both;
+}
+/*  --------Ticket page tables------- */
+.tickets {
+	background-color: #ccc;
+	line-height: 1.8em;
+	border: 1px solid #006600;
+	border-collapse: collapse;
+	font-size: 0.8em;
+	margin-bottom:18px;
+}
+.tickets .dotted_under {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #7DA28D;
+}
+.tickets  th {
+	color: #006600;
+	font-weight: normal;
+	font-size: 1.3em;
+	background: #aaa;
+	line-height: 2em;
+}
+.tickets .centered {
+	text-align: center;
+}
+.tickets .info {
+	color: #006600;
+	font-size: 0.75em;
+	line-height: 1em;
+	padding-bottom: 5px;
+}
+.tickets .solid_under {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #000;
+}
+.tickets  td:first-child {
+	width: 25%;
+	padding-left: 2%;
+}
+#subscriber_info td.subscriber_alert {
+	font-size: 0.8em;
+	color: #a87324;
+	padding-left: 8px;
+	line-height: 1.5em;
+}
+
+/* Images
+-------------------------------------------------------------- */
+
+img {
+	margin: 0;
+	max-width: 640px;
+	border:#060 2px solid;
+}
+.attachment img {
+	max-width: 900px;
+}
+.alignleft,
+img.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 24px;
+	margin-top: 4px;
+}
+.alignright,
+img.alignright {
+	display: inline;
+	float: right;
+	margin-left: 24px;
+	margin-top: 4px;
+}
+.aligncenter,
+img.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+img.alignleft, 
+img.alignright, 
+img.aligncenter {
+	margin-bottom: 12px;
+}
+.wp-caption {
+	background: #797;
+	line-height: 18px;
+	text-align: center;
+	margin-bottom: 12px;
+	padding: 4px;
+}
+.wp-caption img {
+	margin: 5px 5px 0;
+}
+.wp-caption p.wp-caption-text {
+	margin: 5px;
+	color: #111;
+	font-size: 12px;
+}
+.wp-smiley {
+	margin:0;
+}
+/* Quick fixes ---------------------------------------------------*/
+.bio_role {
+	font-size:1em;
+	display:block;
+	color:red;
+}
+.show_title {
+	color:#000;
+	background-color:#339966;
+	font-variant:small-caps;
+	font-family:"Times New Roman", Times, serif;
+	font-size:1.1em;
+}
+.song_title {
+	font-style:italic;
+	color:#777;
+}
+.notice {
+	display:block;
+	border:1px solid #a87324;
+	background-color: #ffc;
+	padding:5px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	font-size:0.8em;
+	line-height:1.3em;
+	width:90%;
+	margin:auto;
+	color:#CC0000;
+}

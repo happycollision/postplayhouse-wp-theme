@@ -1,0 +1,908 @@
+/*/
+$test-color: #444;
+
+$main-text: $test-color;
+$main-bg: $test-color;
+$subtle-bg: $test-color;
+$subtle-border: $test-color;
+$button: $test-color;
+$button-hover: $test-color;
+$button-tint: $test-color;
+$button-hover-tint: $test-color;
+$button-edge: $test-color;
+$pop-bg: $test-color;
+$pop-bg-text: $test-color;
+$subtle-bg-subtle-text: $test-color;
+$article-link: $test-color;
+$article-link-hover: $test-color;
+$pop-bg-link: $test-color;
+$pop-bg-link-hover: $test-color;
+$nav-sub-bg-hover: $test-color;
+$subtle-bg-border-focus: $test-color;
+$button-text: $test-color;
+$input-placeholder: $test-color;
+$main-bg-border: $test-color;
+$alt-link-bg: $test-color;
+$alt-link: $test-color;
+$transparent-dark: $test-color;
+$transparent-dark-complimentary-text: $test-color;
+$transparent-pop-shadow: $test-color;
+$subtle-bg-alt: $test-color;
+$table-border-color: $test-color;
+$article-link-visited: $test-color;
+/**/
+/*/
+$test-color: #444;
+
+$main-text: $test-color;
+$main-bg: $test-color;
+$subtle-bg: $test-color;
+$subtle-border: $test-color;
+$button: $test-color;
+$button-hover: $test-color;
+$button-tint: $test-color;
+$button-hover-tint: $test-color;
+$button-edge: $test-color;
+$pop-bg: $test-color;
+$pop-bg-text: $test-color;
+$subtle-bg-subtle-text: $test-color;
+$article-link: $test-color;
+$article-link-hover: $test-color;
+$pop-bg-link: $test-color;
+$pop-bg-link-hover: $test-color;
+$nav-sub-bg-hover: $test-color;
+$subtle-bg-border-focus: $test-color;
+$button-text: $test-color;
+$input-placeholder: $test-color;
+$main-bg-border: $test-color;
+$alt-link-bg: $test-color;
+$alt-link: $test-color;
+$transparent-dark: $test-color;
+$transparent-dark-complimentary-text: $test-color;
+$transparent-pop-shadow: $test-color;
+$subtle-bg-alt: $test-color;
+$table-border-color: $test-color;
+$article-link-visited: $test-color;
+/**/
+/* line 1, ../app/scss/_typography.scss */
+.show_title {
+  font-style: italic;
+}
+
+/*
+Theme Name: Twenty Thirteen
+Description: Adds support for languages written in a Right To Left (RTL) direction.
+It's easy, just a matter of overwriting all the horizontal positioning attributes
+of your CSS stylesheet in a separate stylesheet file named rtl.css.
+
+See http://codex.wordpress.org/Right_to_Left_Language_Support
+*/
+/**
+ * Table of Contents:
+ *
+ * 1.0 - Reset
+ * 4.0 - Header
+ *   4.1 - Site Header
+ *   4.2 - Navigation
+ * 5.0 - Content
+ *   5.2 - Entry Meta
+ *   5.4 - Galleries
+ *   5.5 - Post Formats
+ *   5.6 - Attachments
+ *   5.7 - Post/Paging Navigation
+ *   5.8 - Author Bio
+ *   5.9 - Archives
+ *   5.10 - Search Results/No posts
+ *   5.12 - Comments
+ * 6.0 - Sidebar
+ *   6.1 - Widgets
+ * 7.0 - Footer
+ * 8.0 - Media Queries
+ * 9.0 - Print
+ * ----------------------------------------------------------------------------
+ */
+/**
+ * 1.0 Reset
+ * ----------------------------------------------------------------------------
+ */
+/* line 42, ../app/scss/rtl.scss */
+body {
+  direction: rtl;
+  unicode-bidi: embed;
+}
+
+/* line 47, ../app/scss/rtl.scss */
+a {
+  display: inline-block;
+}
+
+/* line 51, ../app/scss/rtl.scss */
+blockquote blockquote {
+  margin-left: 0;
+  margin-right: 24px;
+}
+
+/* line 58, ../app/scss/rtl.scss */
+menu,
+ol,
+ul {
+  padding: 0 40px 0 0;
+}
+
+/* line 64, ../app/scss/rtl.scss */
+caption,
+th,
+td {
+  text-align: right;
+}
+
+/* line 68, ../app/scss/rtl.scss */
+td {
+  padding-left: 10px;
+  padding-right: 0;
+}
+
+/* line 73, ../app/scss/rtl.scss */
+.assistive-text:focus {
+  left: auto;
+  right: 5px;
+}
+
+/**
+ * 4.0 Header
+ * ----------------------------------------------------------------------------
+ */
+/**
+ * 4.1 Site Header
+ * ----------------------------------------------------------------------------
+ */
+/* line 89, ../app/scss/rtl.scss */
+.site-header > a:first-child {
+  display: inherit;
+}
+
+/* line 93, ../app/scss/rtl.scss */
+.site-description {
+  font-style: normal;
+}
+
+/**
+ * 4.2 Navigation
+ * ----------------------------------------------------------------------------
+ */
+/* Navbar */
+/* line 105, ../app/scss/rtl.scss */
+ul.nav-menu,
+div.nav-menu > ul {
+  margin: 0 -20px 0 0;
+  padding: 0 0 0 40px;
+}
+
+/* line 111, ../app/scss/rtl.scss */
+.nav-menu .sub-menu,
+.nav-menu .children {
+  float: right;
+  left: auto;
+  right: -2px;
+}
+
+/* line 118, ../app/scss/rtl.scss */
+.nav-menu .sub-menu ul,
+.nav-menu .children ul {
+  border-left: 2px solid #eaefe4;
+  border-right: 0;
+  left: auto;
+  right: 100%;
+}
+
+/* line 125, ../app/scss/rtl.scss */
+.main-navigation .search-form {
+  left: 0;
+  right: auto;
+}
+
+/* line 130, ../app/scss/rtl.scss */
+.site-header .search-field {
+  background-position: 98% center;
+  padding: 0 34px 0 0;
+}
+
+/* line 138, ../app/scss/rtl.scss */
+.nav-menu .current_page_item > a,
+.nav-menu .current_page_ancestor > a,
+.nav-menu .current-menu-item > a,
+.nav-menu .current-menu-ancestor > a {
+  font-style: normal;
+}
+
+/* line 142, ../app/scss/rtl.scss */
+.menu-toggle {
+  padding-left: 0;
+  padding-right: 20px;
+}
+
+/**
+ * 5.0 Content
+ * ----------------------------------------------------------------------------
+ */
+/* line 156, ../app/scss/rtl.scss */
+.sidebar .entry-header,
+.sidebar .entry-content,
+.sidebar .entry-summary,
+.sidebar .entry-meta {
+  padding-left: 376px;
+  padding-right: 60px;
+}
+
+/**
+ * 5.2 Entry Meta
+ * ----------------------------------------------------------------------------
+ */
+/* line 167, ../app/scss/rtl.scss */
+.entry-meta > span {
+  margin-left: 20px;
+  margin-right: auto;
+}
+
+/* line 172, ../app/scss/rtl.scss */
+.entry-meta > span:last-child {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+/* line 177, ../app/scss/rtl.scss */
+.featured-post:before {
+  margin-left: 2px;
+  margin-right: auto;
+}
+
+/* line 182, ../app/scss/rtl.scss */
+.entry-meta .date a:before {
+  margin-left: 2px;
+}
+
+/* line 186, ../app/scss/rtl.scss */
+.comments-link a:before {
+  margin-left: 2px;
+  margin-right: auto;
+}
+
+/* line 191, ../app/scss/rtl.scss */
+.tags-links a:first-child:before {
+  margin-left: 2px;
+}
+
+/* line 195, ../app/scss/rtl.scss */
+.edit-link a:before {
+  margin-left: 2px;
+}
+
+/* line 199, ../app/scss/rtl.scss */
+.page-links .page-links-title {
+  margin-left: 20px;
+  margin-right: auto;
+}
+
+/**
+ * 5.4 Galleries
+ * ----------------------------------------------------------------------------
+ */
+/* line 209, ../app/scss/rtl.scss */
+.gallery {
+  margin-left: auto;
+  margin-right: -4px;
+}
+
+/* line 214, ../app/scss/rtl.scss */
+.gallery-item {
+  float: right;
+  margin: 0 0 4px 4px;
+}
+
+/* line 219, ../app/scss/rtl.scss */
+.gallery-item a {
+  display: inline;
+}
+
+/**
+ * 5.5 Post Formats
+ * ----------------------------------------------------------------------------
+ */
+/* line 229, ../app/scss/rtl.scss */
+.entry-content a {
+  display: inline;
+}
+
+/* line 233, ../app/scss/rtl.scss */
+.format-aside cite:before {
+  content: normal;
+  margin-right: auto;
+}
+
+/* line 238, ../app/scss/rtl.scss */
+.format-aside cite:after {
+  content: "\2014";
+  margin-left: 5px;
+}
+
+/* line 243, ../app/scss/rtl.scss */
+.format-audio .entry-content:before {
+  float: right;
+  -webkit-transform: scaleX(-1);
+  -moz-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+/* line 252, ../app/scss/rtl.scss */
+.format-audio .audio-content {
+  background-position: right top;
+  float: left;
+  padding-left: 0;
+  padding-right: 35px;
+}
+
+/* line 259, ../app/scss/rtl.scss */
+.format-chat .entry-meta .date a:before {
+  margin-left: 4px;
+  margin-right: auto;
+}
+
+/* line 264, ../app/scss/rtl.scss */
+.format-image .wp-caption-text {
+  text-align: right;
+}
+
+/* line 268, ../app/scss/rtl.scss */
+.format-link .entry-title {
+  margin-left: 20px;
+  margin-right: auto;
+}
+
+/* line 274, ../app/scss/rtl.scss */
+.format-status .entry-content,
+.format-status .entry-meta {
+  padding-left: 0;
+  padding-right: 35px;
+}
+
+/* line 280, ../app/scss/rtl.scss */
+.sidebar .format-status .entry-content,
+.sidebar .format-status .entry-meta {
+  padding-left: 376px;
+  padding-right: 95px;
+}
+
+/* line 286, ../app/scss/rtl.scss */
+.format-status .entry-content:before,
+.format-status .entry-meta:before {
+  left: auto;
+  right: 10px;
+}
+
+/* line 292, ../app/scss/rtl.scss */
+.sidebar .format-status .entry-content:before,
+.sidebar .format-status .entry-meta:before {
+  left: auto;
+  right: 70px;
+}
+
+/* line 297, ../app/scss/rtl.scss */
+.format-status .entry-content p:first-child:before {
+  left: auto;
+  right: 4px;
+}
+
+/* line 302, ../app/scss/rtl.scss */
+.sidebar .format-status .entry-content p:first-child:before {
+  left: auto;
+  right: 64px;
+}
+
+/* line 307, ../app/scss/rtl.scss */
+.format-quote blockquote {
+  padding-left: 0;
+  padding-right: 75px;
+}
+
+/* line 312, ../app/scss/rtl.scss */
+.format-quote blockquote:before {
+  content: '\201D';
+  padding-left: 25px;
+  padding-right: 0;
+  left: auto;
+  right: -15px;
+}
+
+/**
+ * 5.6 Attachments
+ * ----------------------------------------------------------------------------
+ */
+/* line 326, ../app/scss/rtl.scss */
+.attachment .entry-title {
+  float: right;
+}
+
+/* line 330, ../app/scss/rtl.scss */
+.attachment .entry-title:before {
+  margin-left: 10px;
+  margin-right: auto;
+}
+
+/* line 335, ../app/scss/rtl.scss */
+.attachment .entry-meta {
+  float: left;
+}
+
+/* line 339, ../app/scss/rtl.scss */
+.image-navigation .nav-previous {
+  left: auto;
+  right: 0;
+}
+
+/* line 344, ../app/scss/rtl.scss */
+.image-navigation .nav-next {
+  left: 0;
+  right: auto;
+}
+
+/* line 349, ../app/scss/rtl.scss */
+.attachment .entry-caption {
+  text-align: right;
+}
+
+/**
+ * 5.7 Post/Paging Navigation
+ * ----------------------------------------------------------------------------
+ */
+/* line 359, ../app/scss/rtl.scss */
+.navigation .nav-previous {
+  float: right;
+}
+
+/* line 363, ../app/scss/rtl.scss */
+.navigation .nav-next {
+  float: left;
+}
+
+/* line 368, ../app/scss/rtl.scss */
+.sidebar .paging-navigation .nav-links,
+.sidebar .post-navigation .nav-links {
+  padding-left: 376px;
+  padding-right: 60px;
+}
+
+/* line 373, ../app/scss/rtl.scss */
+.paging-navigation .nav-previous .meta-nav {
+  margin-left: 10px;
+  margin-right: auto;
+}
+
+/* line 378, ../app/scss/rtl.scss */
+.paging-navigation .nav-next .meta-nav {
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+/* line 383, ../app/scss/rtl.scss */
+.post-navigation a[rel="next"] {
+  float: left;
+  text-align: left;
+}
+
+/**
+ * 5.8 Author Bio
+ * ----------------------------------------------------------------------------
+ */
+/* line 394, ../app/scss/rtl.scss */
+.author-info {
+  text-align: right;
+  /* gallery & video post formats */
+}
+
+/* line 398, ../app/scss/rtl.scss */
+.author.sidebar .author-info {
+  padding-left: 376px;
+  padding-right: 60px;
+}
+
+/* line 403, ../app/scss/rtl.scss */
+.author-avatar .avatar {
+  float: right;
+  margin: 0 0 30px 30px;
+}
+
+/* line 408, ../app/scss/rtl.scss */
+.author-link {
+  margin-left: auto;
+  margin-right: 2px;
+}
+
+/**
+ * 5.9 Archives
+ * ----------------------------------------------------------------------------
+ */
+/* line 419, ../app/scss/rtl.scss */
+.sidebar .archive-meta {
+  padding-left: 316px;
+  padding-right: 0;
+}
+
+/**
+ * 5.10 Search Results/No posts
+ * ----------------------------------------------------------------------------
+ */
+/* line 430, ../app/scss/rtl.scss */
+.sidebar .page-content {
+  padding-left: 376px;
+  padding-right: 60px;
+}
+
+/**
+ * 5.12 Comments
+ * ----------------------------------------------------------------------------
+ */
+/* line 444, ../app/scss/rtl.scss */
+.sidebar .comments-title,
+.sidebar .comment-list,
+.sidebar .comment-reply-title,
+.sidebar .comment-navigation,
+.sidebar .comment-respond .comment-form {
+  padding-left: 376px;
+  padding-right: 60px;
+}
+
+/* line 449, ../app/scss/rtl.scss */
+.comment-list .children {
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+/* line 454, ../app/scss/rtl.scss */
+.comment-author {
+  float: right;
+  margin-left: 50px;
+  margin-right: auto;
+}
+
+/* line 460, ../app/scss/rtl.scss */
+.comment-list .edit-link {
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+/* line 468, ../app/scss/rtl.scss */
+.comment-metadata,
+.comment-content,
+.comment-list .reply,
+.comment-awaiting-moderation {
+  float: left;
+}
+
+/* line 472, ../app/scss/rtl.scss */
+.comment-awaiting-moderation:before {
+  margin-left: 5px;
+  margin-right: auto;
+}
+
+/* line 478, ../app/scss/rtl.scss */
+.comment-reply-link:before,
+.comment-reply-login:before {
+  margin-left: 3px;
+  margin-right: auto;
+  -webkit-transform: scaleX(-1);
+  -moz-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+/* line 488, ../app/scss/rtl.scss */
+.comment-reply-title small a {
+  float: left;
+}
+
+/* line 495, ../app/scss/rtl.scss */
+.comment-form [for="author"],
+.comment-form [for="email"],
+.comment-form [for="url"],
+.comment-form [for="comment"] {
+  float: right;
+}
+
+/* line 499, ../app/scss/rtl.scss */
+.form-allowed-tags code {
+  margin-left: auto;
+  margin-right: 3px;
+}
+
+/* line 504, ../app/scss/rtl.scss */
+.sidebar .no-comments {
+  padding-left: 376px;
+  padding-right: 60px;
+}
+
+/**
+ * 6.0 Sidebar
+ * ----------------------------------------------------------------------------
+ */
+/* line 515, ../app/scss/rtl.scss */
+.site-main .widget-area {
+  float: left;
+}
+
+/* line 519, ../app/scss/rtl.scss */
+.widget-area a {
+  max-width: 100%;
+}
+
+/**
+ * 6.1 Widgets
+ * ----------------------------------------------------------------------------
+ */
+/* line 529, ../app/scss/rtl.scss */
+.widget .widget-title {
+  font-style: normal;
+}
+
+/* line 534, ../app/scss/rtl.scss */
+.widget li > ul,
+.widget li > ol {
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+/**
+ * 7.0 Footer
+ * ----------------------------------------------------------------------------
+ */
+/* line 545, ../app/scss/rtl.scss */
+.site-footer .widget-area,
+.sidebar .site-footer {
+  text-align: right;
+}
+
+/* line 548, ../app/scss/rtl.scss */
+.sidebar .site-footer .widget-area {
+  left: auto;
+  right: -158px;
+}
+
+/* line 553, ../app/scss/rtl.scss */
+.site-footer .widget {
+  float: right;
+  margin-left: 20px;
+  margin-right: auto;
+}
+
+/* line 560, ../app/scss/rtl.scss */
+.sidebar .site-footer .widget:nth-of-type(4),
+.sidebar .site-footer .widget:nth-of-type(3) {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+/**
+ * 8.0 Media Queries
+ * ----------------------------------------------------------------------------
+ */
+@media (max-width: 1069px) {
+  /* line 573, ../app/scss/rtl.scss */
+  ul.nav-menu,
+  div.nav-menu > ul {
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  /* line 580, ../app/scss/rtl.scss */
+  .error404 .page-header,
+  .sidebar .format-image .entry-content img.size-full,
+  .sidebar .format-image .wp-caption:first-child .wp-caption-text {
+    margin-right: auto;
+  }
+
+  /* line 584, ../app/scss/rtl.scss */
+  .main-navigation .search-form {
+    left: 20px;
+    right: auto;
+  }
+
+  /* line 589, ../app/scss/rtl.scss */
+  .site-main .widget-area {
+    margin-left: 60px;
+    margin-right: auto;
+  }
+}
+@media (max-width: 999px) {
+  /* line 607, ../app/scss/rtl.scss */
+  .sidebar .entry-header,
+  .sidebar .entry-content,
+  .sidebar .entry-summary,
+  .sidebar .entry-meta,
+  .sidebar .comment-list,
+  .sidebar .comment-reply-title,
+  .sidebar .comment-navigation,
+  .sidebar .comment-respond .comment-form,
+  .sidebar .featured-gallery,
+  .sidebar .post-navigation .nav-links,
+  .author.sidebar .author-info,
+  .sidebar .format-image .entry-content {
+    max-width: 604px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* line 613, ../app/scss/rtl.scss */
+  .site-main .widget-area {
+    float: none;
+    margin-left: auto;
+  }
+
+  /* line 618, ../app/scss/rtl.scss */
+  .attachment .entry-meta {
+    float: right;
+    text-align: right;
+  }
+
+  /* line 624, ../app/scss/rtl.scss */
+  .sidebar .format-status .entry-content,
+  .sidebar .format-status .entry-meta {
+    padding-left: 0;
+    padding-right: 35px;
+  }
+
+  /* line 630, ../app/scss/rtl.scss */
+  .sidebar .format-status .entry-content:before,
+  .sidebar .format-status .entry-meta:before {
+    left: auto;
+    right: 10px;
+  }
+
+  /* line 635, ../app/scss/rtl.scss */
+  .sidebar .format-status .entry-content p:first-child:before {
+    left: auto;
+    right: 4px;
+  }
+
+  /* line 640, ../app/scss/rtl.scss */
+  .sidebar .site-footer .widget-area {
+    left: auto;
+    right: 0;
+  }
+
+  /* line 645, ../app/scss/rtl.scss */
+  .sidebar .paging-navigation .nav-links {
+    padding: 0 60px;
+  }
+}
+@media (max-width: 767px) {
+  /* line 652, ../app/scss/rtl.scss */
+  .format-image .entry-content img:first-of-type,
+  .format-image .wp-caption:first-child .wp-caption-text {
+    margin-right: auto;
+  }
+}
+@media (max-width: 643px) {
+  /* line 666, ../app/scss/rtl.scss */
+  .sidebar .entry-header,
+  .sidebar .entry-content,
+  .sidebar .entry-summary,
+  .sidebar .entry-meta,
+  .sidebar .comment-list,
+  .sidebar .comment-navigation,
+  .sidebar .featured-gallery,
+  .sidebar .post-navigation .nav-links,
+  .sidebar .format-image .entry-content {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  /* line 672, ../app/scss/rtl.scss */
+  #content .format-status .entry-content,
+  #content .format-status .entry-met {
+    padding-left: 0;
+    padding-right: 35px;
+  }
+
+  /* line 677, ../app/scss/rtl.scss */
+  .menu-toggle:after {
+    padding-left: 0;
+    padding-right: 8px;
+  }
+
+  /* line 683, ../app/scss/rtl.scss */
+  .toggled-on .nav-menu,
+  .toggled-on .nav-menu > ul {
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  /* line 688, ../app/scss/rtl.scss */
+  .toggled-on .nav-menu li > ul {
+    margin-left: auto;
+    margin-right: 20px;
+    right: auto;
+  }
+
+  /* line 694, ../app/scss/rtl.scss */
+  #content .featured-gallery {
+    padding-left: 0;
+    padding-right: 24px;
+  }
+
+  /* line 699, ../app/scss/rtl.scss */
+  .gallery-columns-1 .gallery-item {
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  /* line 704, ../app/scss/rtl.scss */
+  .comment-author {
+    margin-left: 30px;
+    margin-right: auto;
+  }
+
+  /* line 709, ../app/scss/rtl.scss */
+  .format-audio .audio-content {
+    background: none;
+    float: none;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* line 716, ../app/scss/rtl.scss */
+  .gallery-columns-3 .gallery-item:nth-of-type(3n) {
+    margin-left: 4px;
+    margin-right: auto;
+  }
+}
+@media (max-width: 359px) {
+  /* line 723, ../app/scss/rtl.scss */
+  .gallery {
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  /* line 728, ../app/scss/rtl.scss */
+  .gallery .gallery-item:nth-of-type(even) {
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  /* line 738, ../app/scss/rtl.scss */
+  .gallery .gallery-item,
+  .gallery.gallery-columns-3 .gallery-item:nth-of-type(even),
+  .gallery-columns-3 .gallery-item:nth-of-type(3n),
+  .gallery-columns-5 .gallery-item:nth-of-type(5n),
+  .gallery-columns-7 .gallery-item:nth-of-type(7n),
+  .gallery-columns-9 .gallery-item:nth-of-type(9n) {
+    margin-left: 4px;
+    margin-right: auto;
+  }
+
+  /* line 743, ../app/scss/rtl.scss */
+  .comment-author .avatar {
+    margin-left: 5px;
+    margin-right: auto;
+  }
+}
+/**
+ * 9.0 Print
+ * ----------------------------------------------------------------------------
+ */
+@media print {
+  /* line 757, ../app/scss/rtl.scss */
+  .entry-content img.alignleft,
+  .entry-content .wp-caption.alignleft {
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  /* line 763, ../app/scss/rtl.scss */
+  .entry-content img.alignright,
+  .entry-content .wp-caption.alignright {
+    margin-left: 0;
+    margin-right: auto;
+  }
+}
